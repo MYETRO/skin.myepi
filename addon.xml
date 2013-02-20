@@ -2,7 +2,7 @@
 <addon
   id="skin.myepi"
   version="alpha.0.1.0217"
-  name="myePi"
+  name="MYEPi"
   provider-name="MYETRO">
   <requires>
     <import addon="xbmc.gui" version="4.0.0"/>
