@@ -4,6 +4,7 @@
 - Fix background tint in some default views
 - Redo Settings Menu
 - Add new Backgrounds
+- Work 'Recently Added' layout on the Home screen
 
 [B]alpha.0.1.0217[/B]
 
