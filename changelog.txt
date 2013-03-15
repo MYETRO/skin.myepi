@@ -1,10 +1,15 @@
-[B]Next Version - Please Leave Comments below for ideas/suggestions/bugs - Thank You![/B]
-
-- More Library Views
-- Fix background tint in some default views
-- Redo Settings Menu
-- Add new Backgrounds
-- Work 'Recently Added' layout on the Home screen
+[B]MYEPi - alpha.0.2 (Release, 15-03-13)[/B]
+ --------------------------------------------------------
+ - More Library Views
+ - List view update (larger fonts) - mostly done 25-02-13
+ - Addon browser list view+info change - mostly done 25-02-13
+ - Fix background tint in some default views - completely changed
+ - Dialog Video Info fined tuned - mostly done 25-02-13
+ - Redo Settings Menu
+ - Add new Backgrounds
+ - Work 'Recently Added' layout on the Home screen
+ - remove some animations
+ - many more changes
 
 [B]alpha.0.1.0217[/B]
 
