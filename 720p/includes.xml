@@ -1,10 +1,14 @@
 <includes>
 	<include file="defaults.xml" />
-	<include file="ViewsVideoLibrary.xml" />
+	<include file="View_52_MYE_Info.xml" />
+	<include file="View_503_MYE_Fanart.xml" />
+	<include file="View_504_MYE_ListView2.xml" />
 	<include file="ViewsMusicLibrary.xml" />
 	<include file="ViewsFileMode.xml" />
 	<include file="ViewsPictures.xml" />
-	<include file="ViewsAddonBrowser.xml" />
+	<!-- <include file="ViewsAddonBrowser.xml" /> -->
+	<include file="View_550_MYE_AddonInfo.xml" />
+	<include file="View_551_MYE_AddonThumb.xml" />
 	<include file="ViewsLiveTV.xml" />
 	<include file="ViewsPVR.xml" />
 	<include file="IncludesCodecFlagging.xml" />
@@ -48,7 +52,7 @@
 		<posy>0</posy>
 		<width min="0" max="800">auto</width>
 		<height>30</height>
-		<font>font14</font>
+		<font>font_Rating</font>
 		<textcolor>white</textcolor>
 		<shadowcolor>black</shadowcolor>
 		<scroll>false</scroll>
@@ -64,12 +68,12 @@
 
 	<include name="ButtonCommonValues">
 		<height>40</height>
-		<width>40</width>
-		<textoffsetx>0</textoffsetx>
+		<width>250</width>
+		<textoffsetx>15</textoffsetx>
 		<textwidth>200</textwidth>
 		<aligny>left</aligny>
 		<font>font13</font>
-		<texturefocus>back-blue-5.png</texturefocus>
+		<texturefocus>solidfills/s-blue1.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 	</include>
 	<include name="ButtonMediaSubCommonValues">
@@ -79,7 +83,7 @@
 		<textwidth>200</textwidth>
 		<aligny>left</aligny>
 		<font>font12_title</font>
-		<texturefocus>button-focus.png</texturefocus>
+		<texturefocus>solidfills/s-blue1.png</texturefocus>
 		<texturenofocus>button-nofocus.png</texturenofocus>
 	</include>	
 
@@ -93,15 +97,15 @@
 	<include name="ButtonHomeSubCommonValues"> <!-- submenus extras 9001 , before OnFocus-->
 		<height>40</height>
 		<posy>10</posy>
-		<width>200</width>
+		<width>220</width>
 		<textwidth>200</textwidth>
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>font_SubMenu</font>
 		<textcolor>grey3</textcolor>
 		<focusedcolor>white</focusedcolor>
-		<texturefocus>back-blue-5.png</texturefocus>
-		<texturenofocus>HomeSubNF.png</texturenofocus>
+		<texturefocus>solidfills/s-blue1.png</texturefocus>
+		<texturenofocus>backs/home-NF.png</texturenofocus>
 	</include>
 	
 <!-- HomeSubMenuCommonValues 																						-->
@@ -134,7 +138,7 @@
 	<include name="ButtonInfoDialogsCommonValues">
 		<height>40</height>
 		<width>170</width>
-		<textoffsetx>10</textoffsetx>
+		<textoffsetx>20</textoffsetx>
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>font_12title</font>
@@ -148,7 +152,7 @@
 *****
 	Left Menu Option SideBladeLeft -->
 	<include name="SideBladeLeft">
-		<animation effect="slide" start="0,0" end="250,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="390,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-300,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001)">WindowClose</animation>
 		<animation effect="slide" start="0,0" end="-50,0" time="300" tween="quadratic" easing="out" condition="![ControlGroup(9000).HasFocus | Control.HasFocus(9001)]">WindowClose</animation>
 		<animation effect="slide" start="-50,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
@@ -156,7 +160,7 @@
 			<description>Fake button for mouse control</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>250</width>
+			<width>395</width>
 			<height>720</height>
 			<label>-</label>
 			<font>-</font>
@@ -165,7 +169,7 @@
 			<visible>true</visible>
 		</control>
 		<control type="button" id="9001">
-			<posx>250</posx>
+			<posx>350</posx>
 			<posy>20</posy>
 			<width>100</width>
 			<height>38</height>
@@ -181,9 +185,9 @@
 		<control type="image">
 			<posx>-12</posx>
 			<posy>0</posy>
-			<width>260</width>
+			<width>390</width>
 			<height>720</height>
-			<texture>black-back-solid.png</texture>
+			<texture>solidfills/s-grey1.png</texture>
 		</control>
 		<control type="image">
 			<description>LOGO</description>
@@ -204,25 +208,25 @@
 Mouse buttons -  like back , and HOME
 	<include name="MainWindowMouseButtons">
 		<control type="group">
-			<posx>120r</posx>
-			<posy>15r</posy>
+			<posx>110r</posx>
+			<posy>25r</posy>
 			<width>145</width>
-			<height>145</height>
+			<height>205</height>
 			<animation effect="slide" start="0" end="0,-35" time="250">Focus</animation>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>system.getbool(input.enablemouse)</visible>
 			<control type="button">
 				<description>Back push button</description>
-				<posx>10</posx>
-				<posy>0</posy>
+				<posx>20</posx>
+				<posy>10</posy>
 				<width>45</width>
-				<height>45</height>
+				<height>55</height>
 				<label>1036</label>
 				<font>-</font>
 				<aligny>-</aligny>
 				<onclick>back</onclick>
-				<texturefocus>back-blue-5.png</texturefocus>
+				<texturefocus>solidfills/s-blue3.png</texturefocus>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>50</onup>
@@ -230,8 +234,8 @@ Mouse buttons -  like back , and HOME
 			</control>
 			<control type="image">
 				<description>Back Icon</description>
-				<posx>15</posx>
-				<posy>5</posy>
+				<posx>25</posx>
+				<posy>25</posy>
 				<width>35</width>
 				<height>35</height>
 				<aspectratio>keep</aspectratio>
@@ -240,14 +244,14 @@ Mouse buttons -  like back , and HOME
 			<control type="button">
 				<description>Home push button</description>
 				<posx>65</posx>
-				<posy>0</posy>
+				<posy>10</posy>
 				<width>45</width>
-				<height>45</height>
+				<height>55</height>
 				<label>31003</label>
 				<font>-</font>
 				<aligny>-</aligny>
 				<onclick>ActivateWindow(home)</onclick>
-				<texturefocus>back-blue-5.png</texturefocus>
+				<texturefocus>solidfills/s-blue3.png</texturefocus>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>50</onup>
@@ -256,7 +260,7 @@ Mouse buttons -  like back , and HOME
 			<control type="image">
 				<description>Home Icon</description>
 				<posx>70</posx>
-				<posy>5</posy>
+				<posy>25</posy>
 				<width>35</width>
 				<height>35</height>
 				<aspectratio>keep</aspectratio>
@@ -417,10 +421,11 @@ Mouse buttons -  like back , and HOME
 	<include name="CommonPageCount">
 		<control type="group">
 			<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
+			<visible>!Control.IsVisible(503)</visible>
 			<control type="label">
 				<description>Page Count Label</description>
 				<posx>1050</posx>
-				<posy>10</posy>
+				<posy>5</posy>
 				<width>500</width>
 				<height>20</height>
 				<font>font12</font>
@@ -428,7 +433,7 @@ Mouse buttons -  like back , and HOME
 				<scroll>false</scroll>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$INFO[Container.NumItems,([COLOR=blue],[/COLOR]) $LOCALIZE[31025]]$INFO[Container.CurrentPage, - $LOCALIZE[31024] ([COLOR=blue]]$INFO[Container.NumPages,/,[/COLOR])]</label>
+				<label>TOTAL: $INFO[Container.NumItems,[B][COLOR=blue],[/COLOR][/B]] $INFO[Container.CurrentPage, PAGE: [B][COLOR=blue]]$INFO[Container.NumPages,/,[/COLOR][/B]]</label>
 				<include>Window_OpenClose_Animation</include>
 			</control>
 			<control type="label">
@@ -1009,22 +1014,42 @@ Mouse buttons -  like back , and HOME
 	<include name="ScrollOffsetLabel_MYEPi">
 		<control type="group">
 			<visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
-			<animation effect="slide" start="0,0" end="0,-60" time="100">Visible</animation>
-			<animation effect="slide" start="0,-60" end="0,0" delay="1500" time="200">Hidden</animation>
-			<posx>400r</posx>
-			<posy>380</posy>
-			
+			<posx>0</posx>
+			<posy>350</posy>
+			<animation effect="fade" time="100">Visible</animation>
+			<animation effect="fade" delay="1500" time="1000">Hidden</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>40</width>
+				<height>40</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<texture>solidfills/s-grey9.png</texture>
+			</control>
 			<control type="label">
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>40</width>
+				<height>40</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.SortLetter]</label>
+				<textcolor>white</textcolor>
+				<font>font_CrazyHeader175</font>
+			</control>
+			
+			<!-- <control type="image">
 				<posx>350</posx>
 				<posy>100</posy>
 				<width>400</width>
 				<height>400</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.SortLetter]</label>
+				<label>$VAR[SortLetterThumb]</label>
 				<textcolor>white</textcolor>
 				<font>font_CrazyHeader175</font>
-			</control>
+			</control> -->
 		</control>
 	</include>
 
@@ -1109,14 +1134,6 @@ Mouse buttons -  like back , and HOME
 				<bordersize>3</bordersize>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 			</control>
-			<control type="image">
-				<posx>5</posx>
-				<posy>120</posy>
-				<width>170</width>
-				<height>110</height>
-				<aspectratio aligny="top">keep</aspectratio>
-				<texture diffuse="diffuse_mirror2.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
-			</control>
 			<control type="label">
 				<posx>91</posx>
 				<posy>125</posy>
@@ -1185,6 +1202,14 @@ Mouse buttons -  like back , and HOME
 			</control>
 		</focusedlayout>
 	</include>
+
+
+
+
+
+
+
+
 
 
 	<include name="TVNextAiredListCommonLayout">
@@ -1350,6 +1375,12 @@ Mouse buttons -  like back , and HOME
 	</include>
 
 	
+
+
+
+
+
+
 	<include name="backgroundfade">
 		 <animation effect="fade" time="600">Visible</animation>
 		 <animation effect="fade" time="600">Hidden</animation>

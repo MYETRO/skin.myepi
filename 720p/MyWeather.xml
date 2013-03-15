@@ -674,8 +674,10 @@
 		</control>
 		<include>CommonNowPlaying</include>
 		<include>MainWindowMouseButtons</include>
+
+
 		<control type="group">
-			<posx>-250</posx>
+			<posx>-390</posx>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
 				<posx>0</posx>

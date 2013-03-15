@@ -5,7 +5,29 @@
 	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(2)">ClearProperty(VideosDirectLink)</onunload>
 	
 	<controls>
-		<include>CommonBackground</include>
+		<!-- <include>CommonBackground</include> -->
+		<control type="image">
+			<description>Normal Default Background Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>scale</aspectratio>
+			<texture>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
+			<visible>![Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))]</visible>
+			<include>VisibleFadeEffect</include>
+		</control>
+		<control type="image">
+			<description>User Set Background Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>scale</aspectratio>
+			<texture>$INFO[Skin.String(CustomBackgroundPath)]</texture>
+			<visible>Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))</visible>
+			<include>VisibleFadeEffect</include>
+		</control>
 		<control type="image">
 			<posx>0</posx>
 			<posy>90r</posy>
@@ -33,7 +55,7 @@
 			<texture>black-back-70%.png</texture>
 			<visible>Player.HasMedia</visible>
 		</control>
-		<control type="image">
+		<!-- <control type="image">
 			<description>LOGO</description>
 			<posx>900</posx>
 			<posy>10</posy>
@@ -45,7 +67,48 @@
 			<include>Window_OpenClose_Animation</include>
 			<visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
 			<visible>!Player.HasMedia</visible>
-		</control>
+		</control> -->
+
+		<!-- <control type="label">
+			<description>Window(Home).Property() 
+			The home window has the following info labels. 
+Movies.Count, Movies.Watched, Movies.UnWatched, TVShows.Count, TVShows.Watched, TVShows.UnWatched, Episodes.Count, Episodes.Watched, Episodes.UnWatched, MusicVideos.Count, MusicVideos.Watched, MusicVideos.UnWatched, Music.SongsCount, Music.AlbumsCount, Music.ArtistsCount 
+
+LatestMovie.[1-10].Title, LatestMovie.[1-10].Year, LatestMovie.[1-10].RunningTime, LatestMovie.[1-10].Rating, LatestMovie.[1-10].Plot, LatestMovie.[1-10].Trailer, LatestMovie.[1-10].Thumb, LatestMovie.[1-10].Fanart, LatestMovie.[1-10].Path 
+
+LatestEpisode.[1-10].ShowTitle, LatestEpisode.[1-10].EpisodeTitle, LatestEpisode.[1-10].EpisodeNo, LatestEpisode.[1-10].EpisodeSeason, LatestEpisode.[1-10].EpisodeNumber, LatestEpisode.[1-10].Rating, LatestEpisode.[1-10].Plot, LatestEpisode.[1-10].Thumb, LatestEpisode.[1-10].ShowThumb, LatestEpisode.[1-10].SeasonThumb, LatestEpisode.[1-10].Fanart, LatestEpisode.[1-10].Path 
+
+LatestMusicVideo.[1-10].Title, LatestMusicVideo.[1-10].Thumb, LatestMusicVideo.[1-10].Year, LatestMusicVideo.[1-10].Plot, LatestMusicVideo.[1-10].RunningTime, LatestMusicVideo.[1-10].Path, LatestMusicVideo.[1-10].Artist, LatestMusicVideo.[1-10].Fanart 
+
+LatestSong.[1-10].Title, LatestSong.[1-10].Artist, LatestSong.[1-10].Album, LatestSong.[1-10].Year, LatestSong.[1-10].Rating, LatestSong.[1-10].Thumb, LatestSong.[1-10].Fanart, LatestSong.[1-10].Path 
+
+LatestAlbum.[1-10].Title, LatestAlbum.[1-10].Artist, LatestAlbum.[1-10].Year, LatestAlbum.[1-10].Rating, LatestAlbum.[1-10].Thumb, LatestAlbum.[1-10].Fanart, LatestAlbum.[1-10].Path
+			</description>
+			<posx>500</posx>
+			<posy>40</posy>
+			<width>570</width>
+			<height>600</height>
+			<aspectratio aligny="top" align="center">keep</aspectratio>
+			<label>Movies: $INFO[Window(Home).Property(Movies.Watched),,/]$INFO[Window(Home).Property(Movies.Count)][CR]Unwatched: $INFO[Window(Home).Property(Movies.UnWatched)][CR][CR]TV Shows: $INFO[Window(Home).Property(TVShows.Count)][CR]Episodes.Count: $INFO[Window(Home).Property(Episodes.Count),,/][CR]Episodes: $INFO[Window(Home).Property(Episodes.Watched),,/]$INFO[Window(Home).Property(Episodes.UnWatched)] </label>
+			<align>left</align>
+			<aligny>top</aligny>
+			<font>font_View503NF</font>
+			<textcolor>white</textcolor>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+		</control> -->
+
+
+
+
+
+
+
+
+
+
+
+
 		<!-- Music Info -->
 		<control type="group">
 			<posx>0</posx>
@@ -864,27 +927,7 @@ stuff like that
 
 
 		
-		<control type="group">
-			<!-- <visible allowhiddenfocus="false">Control.HasFocus(9000)</visible> -->
-<!-- 
-*
-HomeBack image , this is the background for the main menu -->
-		<animation type="WindowOpen" reversible="false">
-				<effect type="rotatey" start="-200" end="0" left="640,560" easing="out" time="600" />
-				<effect type="fade" start="0" end="800" time="500" />
-			</animation>
-			<animation type="WindowClose" reversible="false">
-				<effect type="slide" start="0" end="-500" center="640,360" easing="in" time="500" />
-				<effect type="fade" start="100" end="0" time="500" />
-			</animation>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>380</width>
-				<height>720</height>
-				<texture>HomeBack.png</texture>
-			</control>
-		</control>	
+
 
 
 
@@ -911,9 +954,27 @@ HomeBack image , this is the background for the main menu -->
 			<!-- GroupList for MainMenu + Sub Menu 
 *************************************************************
 			*-->
+			<!-- <control type="image">
+				<posx>300</posx>
+				<posy>0</posy>
+				<width>5</width>
+				<height>720</height>
+				<texture>solidfills/s-blue4.png</texture>
+			</control> -->
+
+			
+
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>720</height>
+				<texture>SideFade.png</texture>
+			</control>
+
+			***********************************
+			
 		<control type="group"> 
-			<posx>40</posx>
-			<posy>255</posy>  
 			<animation type="WindowOpen" reversible="false">
 				<effect type="slide" start="-500" end="0" center="640,360" easing="out" tween="back" time="600" />
 				<effect type="fade" start="0" end="100" time="400" />
@@ -922,72 +983,395 @@ HomeBack image , this is the background for the main menu -->
 				<effect type="slide" start="0" end="-500" center="640,360" easing="out"  time="200" />
 				<effect type="fade" start="100" end="0" time="200" />
 			</animation>			
+
+
+
+<!-- MOVIES ********* -->
+			<control type="group">
+				<visible>Library.HasContent(Movies)</visible>
+				<visible>Container(9000).Hasfocus(10) + !Player.HasMedia</visible>
+				<posx>340</posx>
+				<posy>50</posy>
+					<control type="grouplist">
+						<orientation>horizontal</orientation>
+						<control type="image">
+							<posx></posx>
+							<posy></posy>
+							<width>180</width>
+							<height>180</height>
+							<texture>solidfills/s-blue4.png</texture>
+						</control>
+						<control type="image">
+							<posx></posx>
+							<posy></posy>
+							<width>180</width>
+							<height>180</height>
+							<texture>solidfills/s-blue4.png</texture>
+						</control>
+						<!-- <control type="image">
+							<posx></posx>
+							<posy></posy>
+							<width>180</width>
+							<height>180</height>
+							<texture>solidfills/s-blue4.png</texture>
+						</control> -->
+					</control>
+
+				<control type="label">
+					<description>MOVIES COUNT</description>
+					<description>Window(Home).Property()+ 
+		Movies.Count, Movies.Watched, Movies.UnWatched
+		LatestMovie.[1-10].Title, LatestMovie.[1-10].Year, LatestMovie.[1-10].RunningTime, LatestMovie.[1-10].Rating, LatestMovie.[1-10].Plot, LatestMovie.[1-10].Trailer, LatestMovie.[1-10].Thumb, LatestMovie.[1-10].Fanart, LatestMovie.[1-10].Path 
+					</description>
+					<posx>15</posx>
+					<posy>20</posy>
+					<label>$INFO[Window(Home).Property(Movies.Count)]</label>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>numbers</font>
+					<textcolor>white</textcolor>
+				</control>				
+				<control type="label">
+					<description></description>
+					<posx>15</posx>
+					<posy>115</posy>
+					<label>movies</label>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>smlegend</font>
+					<textcolor>white</textcolor>
+				</control>
+
+				<control type="label">
+						<description>*** UNWATCHED  ***</description>
+						<posx>200</posx>
+						<posy>15</posy>
+						<label>$INFO[Window(Home).Property(Movies.Unwatched)]</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>numbers</font>
+						<textcolor>white</textcolor>
+					</control>
+					<control type="label">
+						<description></description>
+						<posx>200</posx>
+						<posy>115</posy>
+						<label>unwatched</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>smlegend</font>
+						<textcolor>white</textcolor>
+					</control>
+
+					<!-- <control type="label">
+						<description>*** EPISODES UNWATCHED  ***</description>
+						<posx>385</posx>
+						<posy>15</posy>
+						<width>570</width>
+						<height>600</height>
+						<aspectratio aligny="top" align="center">keep</aspectratio>
+						<label>$INFO[Window(Home).Property(Movies.Unwatched)]</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>numbers</font>
+						<textcolor>white</textcolor>
+					</control>
+					<control type="label">
+						<description></description>
+						<posx>385</posx>
+						<posy>115</posy>
+						<label>unwatched</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>smlegend</font>
+						<textcolor>white</textcolor>
+					</control> -->
+
+			</control>
+
+
+<!-- TV SHOWS ********* -->			
+			<control type="group">
+				<visible>Library.HasContent(TVShows)</visible>
+				<visible>Container(9000).Hasfocus(11) + !Player.HasMedia</visible>
+				<posx>340</posx>
+				<posy>50</posy>
+					<control type="grouplist">
+						<orientation>horizontal</orientation>
+						<control type="image">
+							<posx></posx>
+							<posy></posy>
+							<width>180</width>
+							<height>180</height>
+							<texture>solidfills/s-blue4.png</texture>
+						</control>
+						<control type="image">
+							<posx></posx>
+							<posy></posy>
+							<width>180</width>
+							<height>180</height>
+							<texture>solidfills/s-blue4.png</texture>
+						</control>
+						<control type="image">
+							<posx></posx>
+							<posy></posy>
+							<width>180</width>
+							<height>180</height>
+							<texture>solidfills/s-blue4.png</texture>
+						</control>
+					</control>
+
+				<control type="label">
+					<description>MOVIES COUNT</description>
+					<description>Window(Home).Property() 
+						TVShows.Count, TVShows.Watched, TVShows.UnWatched, Episodes.Count, Episodes.Watched, Episodes.UnWatched, 
+
+		LatestEpisode.[1-10].ShowTitle, LatestEpisode.[1-10].EpisodeTitle, LatestEpisode.[1-10].EpisodeNo, LatestEpisode.[1-10].EpisodeSeason, LatestEpisode.[1-10].EpisodeNumber, LatestEpisode.[1-10].Rating, LatestEpisode.[1-10].Plot, LatestEpisode.[1-10].Thumb, LatestEpisode.[1-10].ShowThumb, LatestEpisode.[1-10].SeasonThumb, LatestEpisode.[1-10].Fanart, LatestEpisode.[1-10].Path 
+					</description>
+					<posx>15</posx>
+					<posy>20</posy>
+					<label>$INFO[Window(Home).Property(TVShows.Count)]</label>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>numbers</font>
+					<textcolor>white</textcolor>
+				</control>				
+				<control type="label">
+					<description></description>
+					<posx>15</posx>
+					<posy>115</posy>
+					<label>tv shows</label>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>smlegend</font>
+					<textcolor>white</textcolor>
+				</control>
+
+				<control type="label">
+						<description>*** EPISODES  ***</description>
+						<posx>200</posx>
+						<posy>15</posy>
+						<label>$INFO[Window(Home).Property(Episodes.Count)]</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>numbers</font>
+						<textcolor>white</textcolor>
+					</control>
+					<control type="label">
+						<description></description>
+						<posx>200</posx>
+						<posy>115</posy>
+						<label>episodes</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>smlegend</font>
+						<textcolor>white</textcolor>
+					</control>
+
+					<control type="label">
+						<description>*** EPISODES UNWATCHED  ***</description>
+						<posx>385</posx>
+						<posy>15</posy>
+						<label>$INFO[Window(Home).Property(Episodes.Unwatched)]</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>numbers</font>
+						<textcolor>white</textcolor>
+					</control>
+					<control type="label">
+						<description></description>
+						<posx>385</posx>
+						<posy>115</posy>
+						<label>unwatched</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>smlegend</font>
+						<textcolor>white</textcolor>
+					</control>
+
+			</control>
+
+
+
+<!-- MUSIC ********* -->
+			<control type="group">
+				<visible>Library.HasContent(Music)</visible>
+				<visible>Container(9000).Hasfocus(3) + !Player.HasMedia</visible>
+				<posx>340</posx>
+				<posy>50</posy>
+					<control type="grouplist">
+						<orientation>horizontal</orientation>
+						<control type="image">
+							<posx></posx>
+							<posy></posy>
+							<width>180</width>
+							<height>180</height>
+							<texture>solidfills/s-blue4.png</texture>
+						</control>
+						<control type="image">
+							<posx></posx>
+							<posy></posy>
+							<width>180</width>
+							<height>180</height>
+							<texture>solidfills/s-blue4.png</texture>
+						</control>
+						<control type="image">
+							<posx></posx>
+							<posy></posy>
+							<width>180</width>
+							<height>180</height>
+							<texture>solidfills/s-blue4.png</texture>
+						</control>
+					</control>
+
+					<control type="label">
+						<description>MUSIC COUNT</description>
+						<description>Window(Home).Property() 
+						MusicVideos.Count, MusicVideos.Watched, MusicVideos.UnWatched, Music.SongsCount, Music.AlbumsCount, Music.ArtistsCount 
+
+			LatestSong.[1-10].Title, LatestSong.[1-10].Artist, LatestSong.[1-10].Album, LatestSong.[1-10].Year, LatestSong.[1-10].Rating, LatestSong.[1-10].Thumb, LatestSong.[1-10].Fanart, LatestSong.[1-10].Path 
+
+			LatestAlbum.[1-10].Title, LatestAlbum.[1-10].Artist, LatestAlbum.[1-10].Year, LatestAlbum.[1-10].Rating, LatestAlbum.[1-10].Thumb, LatestAlbum.[1-10].Fanart, LatestAlbum.[1-10].Path
+						</description>
+						<posx>15</posx>
+						<posy>20</posy>
+						<label>$INFO[Window(Home).Property(Music.ArtistsCount)]</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>numbers</font>
+						<textcolor>white</textcolor>
+					</control>				
+					<control type="label">
+						<description></description>
+						<posx>15</posx>
+						<posy>115</posy>
+						<label>artists</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>smlegend</font>
+						<textcolor>white</textcolor>
+					</control>
+
+					<control type="label">
+						<description>*** ALBUMS  ***</description>
+						<posx>200</posx>
+						<posy>15</posy>
+						<label>$INFO[Window(Home).Property(Music.AlbumsCount)]</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>numbers</font>
+						<textcolor>white</textcolor>
+					</control>
+					<control type="label">
+						<description></description>
+						<posx>200</posx>
+						<posy>115</posy>
+						<label>albums</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>smlegend</font>
+						<textcolor>white</textcolor>
+					</control>
+
+					<control type="label">
+						<description>*** SONGS  ***</description>
+						<posx>385</posx>
+						<posy>15</posy>
+						<label>$INFO[Window(Home).Property(Music.SongsCount)]</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>numbers</font>
+						<textcolor>white</textcolor>
+					</control>
+					<control type="label">
+						<description></description>
+						<posx>385</posx>
+						<posy>115</posy>
+						<label>songs</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>smlegend</font>
+						<textcolor>white</textcolor>
+					</control>
+				</control>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			<!-- CONTROLS THE LIST OF BUTTONS, VIDEOS, WEATHER AND SO ON -->
 			<control type="fixedlist" id="9000">
 				<!-- <animation effect="zoom" end="100" center="0,0" time="200">Focus</animation>
 				<animation effect="zoom" end="100" center="0,0"  time="200">UnFocus</animation> -->
 				<!-- condition="Control.HasFocus(9001)" -->
-				<posx>0</posx>
-				<posy>-210</posy>
-				<width>380</width>
-				<height>720</height>
+				<posx>45</posx>
+				<posy>40</posy>
+				<width>290</width>
+				<height>610</height>
 				<onright>9001</onright>
 				<onleft>9002</onleft>
 				<!-- <ondown>0</ondown> -->
 				<!-- <texture>button-focus.png</texture> -->
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<focusposition>7</focusposition>
+				<focusposition>4</focusposition>
 				<movement>0</movement>
 				<orientation>Vertical</orientation>
 								
-				<itemlayout height="32" width="5"><!-- <control type="image"> <!-- control individiual text entries eg. videos -->
+				<itemlayout height="45" width="5"><!-- <control type="image"> <!-- control individiual text entries eg. videos -->
 					<control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>425</width>
 						<height>720</height>
-						<font>font_SubMainMenu</font>
-						<textcolor>grey3</textcolor>
+						<font>home-sub</font>
+						<textcolor>grey</textcolor>
 						<align>left</align>
 						<aligny>left</aligny>
-						<label>$INFO[ListItem.Label]</label>
-						<texture>button-focus2.png</texture>
+						<label>[LOWERCASE]$INFO[ListItem.Label][/LOWERCASE]</label>
 						<!-- <visible>!Skin.HasSetting(HomeMenuNoMovieButton) + Library.HasContent(Movies)</visible> -->
 					</control>
 
 				</itemlayout>
 		<!-- FOCUSED BUTTON				 -->
-				<focusedlayout height="65" width="500"><!-- text label before hover effect , linked with hover-->
+				<focusedlayout height="65" width="280"><!-- text label before hover effect , linked with hover-->
 					<control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>500</width>
+						<width>320</width>
 						<height>auto</height>
-						<font>font_MainMenu2</font>
-						<textcolor>grey</textcolor>
+						<font>home</font>
+						<textcolor>blue2</textcolor>
 						<align>left</align>
 						<aligny>left</aligny>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[LOWERCASE]$INFO[ListItem.Label][/LOWERCASE]</label>
 						<!-- <label>system</label> -->
 					</control>
 					<!-- hover effect -->
-					<control type="label">
+					<!-- <control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>420</width>
 						<height>auto</height>
-						<font>font_MainMenu2</font>
-						<textcolor>white</textcolor>
+						<font>home</font>
+						<textcolor>blue2</textcolor>
 						<align>left</align>
 						<aligny>left</aligny>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[LOWERCASE]$INFO[ListItem.Label][/LOWERCASE]</label>
 						<visible>Control.HasFocus(9000)</visible>
-						<include>VisibleFadeEffect</include>
-					</control>
+					</control> -->
 				</focusedlayout>
 
-
+				
 
 				<content>
 					
@@ -1127,8 +1511,17 @@ HomeBack image , this is the background for the main menu -->
 
 
 
-
-
+			<!-- <control type="image">
+				<description>Favourites Icon</description>
+				<posx>405</posx>
+				<posy>505</posy>
+				<width>35</width>
+				<height>35</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon_favourites.png</texture>
+				<visible>!Control(9001).HasFocus</visible>
+			</control>
+ -->
 
 <!-- 
 *
@@ -1144,11 +1537,11 @@ SubMainMenu ****************************
 <animation type="focus" effect="slide" start="0,0" end="100,400" time="100" reversible="false"></animation> -->
 <!-- controls position animation for SubMenu -->
 <animation type="Focus"> 
-	<effect type="slide" start="0" end="300,40" time="200"/>
-</animation>
+	<effect type="slide" start="0" end="245,0" time="200"/>
+</animation><!-- 
 <animation type="UnFocus"> 
 	<effect type="slide" start="330,35" end="0,0" time="200"/>
-</animation>
+</animation> -->
 
 
 <!-- <animation type="UnFocus"> 
@@ -1158,8 +1551,9 @@ SubMainMenu ****************************
 </animation> --> <!-- 
 <animation effect="zoom" end="80" center="0" time="200">UnFocus</animation>
 <animation effect="zoom" end="100" center="0" time="100">Focus</animation>  -->
-				<posx>-452</posx>
-				<posy>5</posy>
+				<posx>-363</posx>
+				<posy>250</posy>
+				<width>400</width>
 				<onleft>9000</onleft>
 				<onright>600</onright>
 				<!-- <textoffsetx>10</textoffsetx> -->
@@ -1289,46 +1683,19 @@ NOT SURE WHAT THIS DOES  -->
 				</content>
 			</control>
 		</control> <!-- END -->
+
 		
-
-
-		<control type="group">
-			<posx>0</posx>
-			<posy>33r</posy>
-			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-			<include>Window_OpenClose_Animation</include>
-			<control type="rss">
-				<description>RSS feed</description>
-				<posx>100</posx>
-				<posy>0</posy>
-				<height>30</height>
-				<width>1145</width>
-				<font>font12</font>
-				<urlset>1</urlset>
-				<textcolor>blue</textcolor>
-				<titlecolor>blue</titlecolor>
-				<headlinecolor>white</headlinecolor>
-			</control>
-			<control type="image">
-				<description>RSS background</description>
-				<posx>1250</posx>
-				<posy>2</posy>
-				<width>24</width>
-				<height>24</height>
-				<texture>icon-rss.png</texture>
-			</control>
-		</control>
-		<control type="group" id="10">
-			<posx>20</posx>
-			<posy>55r</posy>
-			<include>Window_OpenClose_Animation</include>
-
-			
 <!-- 
 *
 *
 *
 bottom dock -->
+
+		<control type="group" id="10">
+			<posx>20</posx>
+			<posy>55r</posy>
+			<include>Window_OpenClose_Animation</include>
+
 			<control type="button" id="21">
 				<description>Power push button</description>
 				<posx>55</posx>

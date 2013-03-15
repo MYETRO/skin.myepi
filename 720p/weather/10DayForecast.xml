@@ -95,7 +95,7 @@
 						<posy>0</posy>
 						<width>600</width>
 						<height>136</height>
-						<texture>back-blue-1.png</texture>
+						<texture>solidfills/s-blue1.png</texture>
 						<visible>Control.HasFocus(51)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>

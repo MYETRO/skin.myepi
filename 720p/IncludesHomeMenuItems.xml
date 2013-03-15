@@ -1,10 +1,12 @@
 <includes>
 	<include name="HomeSubMenuVideos">
 		<control type="image" id="90101">
-			<width>340</width>
-			<height>60</height>
-			<texture>HomeSubEnd.png</texture>
+			<width>235</width>
+			<height>45</height>
+			<texture>backs/home-arrow.png</texture>
 		</control>
+
+
 		<control type="button" id="90102">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>342</label>
@@ -43,10 +45,10 @@
 	
 	<!-- HomeSubMenuMovies 		--  add and remove SubMenu Items 																		-->
 	<include name="HomeSubMenuMovies">
-		<control type="image" id="90161">
-			<width>340</width>
-			<height>60</height>
-			<texture flipy="false">HomeSubEnd.png</texture> <!--  controls arrow of sub menu list -->
+		<control type="image" id="90101">
+			<width>235</width>
+			<height>45</height>
+			<texture>backs/home-arrow.png</texture>
 		</control>
 		<control type="button" id="90162">
 			<include>ButtonHomeSubCommonValues</include>
@@ -84,10 +86,10 @@
 		
 	</include>
 	<include name="HomeSubMenuTVShows">
-		<control type="image" id="90171">
-			<width>340</width>
-			<height>60</height>
-			<texture>HomeSubEnd.png</texture>
+		<control type="image" id="90101">
+			<width>235</width>
+			<height>45</height>
+			<texture>backs/home-arrow.png</texture>
 		</control>
 		<control type="button" id="90172">
 			<include>ButtonHomeSubCommonValues</include>
@@ -115,12 +117,16 @@
 			<onclick>ActivateWindow(Videos,TVShowActors,return)</onclick>
 		</control>
 	</include>
+
+
 	<include name="HomeSubMenuMusic">
-		<control type="image" id="90111">
-			<width>340</width>
-			<height>60</height>
-			<texture>HomeSubEnd.png</texture>
+		<control type="image" id="90101">
+			<width>235</width>
+			<height>45</height>
+			<texture>backs/home-arrow.png</texture>
+			<visible>!Control(9000).HasFocus(9001)</visible>
 		</control>
+
 		<control type="button" id="90112">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>133</label>
@@ -165,10 +171,10 @@
 	</include>
 	
 	<include name="HomeSubMenuSystem">
-		<control type="image" id="90121">
-			<width>340</width>
-			<height>60</height>
-			<texture>HomeSubEnd.png</texture>
+		<control type="image" id="90101">
+			<width>235</width>
+			<height>45</height>
+			<texture>backs/home-arrow.png</texture>
 		</control>
 		<!-- <control type="image">
 					<description>background top rounded corners for sub menu</description>
@@ -201,10 +207,10 @@
 	</include>
 	
 	<include name="HomeSubMenuPlayDisc">
-		<control type="image" id="90131">
-			<width>340</width>
-			<height>60</height>
-			<texture>HomeSubEnd.png</texture>
+		<control type="image" id="90101">
+			<width>235</width>
+			<height>45</height>
+			<texture>backs/home-arrow.png</texture>
 		</control>
 		<control type="button" id="90132">
 			<include>ButtonHomeSubCommonValues</include>
@@ -215,10 +221,10 @@
 	</include>
 	
 	<include name="HomeSubMenuPictures">
-		<control type="image" id="90147">
-			<width>340</width>
-			<height>60</height>
-			<texture>HomeSubEnd.png</texture>
+		<control type="image" id="90101">
+			<width>235</width>
+			<height>45</height>
+			<texture>backs/home-arrow.png</texture>
 		</control>
 		<control type="button" id="90148">
 			<include>ButtonHomeSubCommonValues</include>
@@ -228,10 +234,10 @@
 	</include>
 	
 	<include name="HomeSubMenuLiveTV">
-		<control type="image" id="90141">
-			<width>340</width>
-			<height>60</height>
-			<texture>HomeSubEnd.png</texture>
+		<control type="image" id="90101">
+			<width>235</width>
+			<height>45</height>
+			<texture>backs/home-arrow.png</texture>
 		</control>
 		<control type="button" id="90142">
 			<include>ButtonHomeSubCommonValues</include>

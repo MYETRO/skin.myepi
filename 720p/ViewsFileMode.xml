@@ -2,11 +2,22 @@
 	<include name="CommonRootView">
 		<control type="group">
 			<visible>Control.IsVisible(50)</visible>
-			<include>VisibleFadeEffect</include>
+			<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<!-- <aspectratio>scale</aspectratio> -->
+					<fadetime>IconCrossfadeTime</fadetime>
+					<!-- <texture>tints/black-80.png</texture>  tint -->
+					<texture>solidfills/s-greydark.png</texture>
+					<!-- <visible>Container.Content(Movies)</visible> -->
+			</control>
+			<!-- <include>VisibleFadeEffect</include> -->
 			<control type="list" id="50">
-				<posx>70</posx>
+				<posx>345</posx>
 				<posy>78</posy>
-				<width>690</width>
+				<width>910</width>
 				<height>561</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
@@ -14,56 +25,63 @@
 				<ondown>50</ondown>
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>60</pagecontrol>
-				<scrolltime>200</scrolltime>
-				<itemlayout height="40" width="580">
-					<control type="image">
+				<scrolltime>80</scrolltime>
+				<focusposition>6</focusposition>
+				<movement>0</movement>
+				<itemlayout height="45" width="880">
+					<!-- <control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>690</width>
+						<width>790</width>
 						<height>41</height>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
-					</control>
+						<texture>MenuItemNF.png</texture>
+					</control> -->
 					<control type="label">
-						<posx>10</posx>
+						<description> LIST SELECTED text </description>
+						<posx>20</posx>
 						<posy>0</posy>
-						<width>660</width>
+						<width>910</width>
 						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
+						<font>font_CrazyHeaderLight25</font>
+						<textcolor>grey</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
+
 					<control type="label">
-						<posx>680</posx>
+						<description>Addon VERSION </description>
+						<posx>0r</posx>
 						<posy>0</posy>
 						<width>400</width>
 						<height>40</height>
-						<font>font12</font>
-						<textcolor>grey2</textcolor>
+						<font>font_CrazyHeaderLight25</font>
+						<textcolor>grey</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 						<visible>!Window.IsVisible(Videos)</visible>
 					</control>
+
 					<control type="label">
-						<posx>620</posx>
+						<description> RATINGS FOR MOVIES </description>
+						<posx>55r</posx>
 						<posy>0</posy>
 						<width>400</width>
 						<height>40</height>
-						<font>font12</font>
-						<textcolor>grey2</textcolor>
+						<font>font_CrazyHeaderLight25</font>
+						<textcolor>grey</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 						<visible>Window.IsVisible(Videos)</visible>
-						<animation effect="slide" start="0,0" end="40,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
 					</control>
 					<control type="image">
-						<posx>625</posx>
+						<description>VIDEO RESOLUTION </description>
+						<posx>40r</posx>
 						<posy>8</posy>
 						<width>40</width>
 						<height>26</height>
@@ -71,7 +89,8 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 					</control>
 					<control type="image">
-						<posx>665</posx>
+						<description> WATCHED </description>
+						<posx>0r</posx>
 						<posy>14</posy>
 						<width>20</width>
 						<height>16</height>
@@ -79,7 +98,8 @@
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 					</control>
 					<control type="image">
-						<posx>665</posx>
+						<description> RESUMABLE </description>
+						<posx>0r</posx>
 						<posy>14</posy>
 						<width>16</width>
 						<height>16</height>
@@ -87,74 +107,76 @@
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="40" width="580">
+
+
+
+				<focusedlayout height="45" width="910">
 					<control type="image">
 						<posx>0</posx>
-						<posy>0</posy>
-						<width>690</width>
-						<height>41</height>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<posy>-3</posy>
+						<width>910</width>
+						<height>50</height>
+						<!-- <texture>solidfills/s-blue1.png</texture> -->
+						<texture>tints/white-10.png</texture>
 						<visible>!Control.HasFocus(50)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
 						<posx>0</posx>
-						<posy>0</posy>
-						<width>690</width>
-						<height>41</height>
-						<texture border="0,2,0,2">MenuItemFO.png</texture>
+						<posy>-3</posy>
+						<width>910</width>
+						<height>50</height>
+						<texture>tints/black-60.png</texture>
+						<!-- <texture>solidfills/s-blue1.png</texture> -->
 						<visible>Control.HasFocus(50)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
-					<control type="image">
-						<posx>490</posx>
-						<posy>4</posy>
-						<width>200</width>
-						<height>33</height>
-						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(50) + !IsEmpty(ListItem.Label2)</visible>
-					</control>
-					<control type="label">
-						<posx>10</posx>
+					<control type="label">   <!-- List items -->
+						<description> LIST ITEM SELECTED </description>
+						<posx>20</posx>
 						<posy>0</posy>
-						<width>660</width>
+						<width>910</width>
 						<height>40</height>
-						<font>font13</font>
+						<font>font_CrazyHeaderLight30</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<autoscroll>false</autoscroll>
 					</control>
-					<control type="label">
-						<posx>680</posx>
+					<control type="label">  		<!-- Enabled bit -->
+						<description>Addon VERSION </description>
+						<posx>20r</posx>
 						<posy>0</posy>
 						<width>400</width>
 						<height>40</height>
-						<font>font12</font>
-						<textcolor>grey2</textcolor>
+						<font>font13</font>
+						<textcolor>grey</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 						<visible>!Window.IsVisible(Videos)</visible>
+						<autoscroll>false</autoscroll>
 					</control>
+
 					<control type="label">
-						<posx>620</posx>
+						<description> RATINGS FOR MOVIES </description>
+						<posx>80r</posx>
 						<posy>0</posy>
 						<width>400</width>
 						<height>40</height>
-						<font>font12</font>
-						<textcolor>grey2</textcolor>
+						<font>font_CrazyHeaderLight30</font>
+						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 						<visible>Window.IsVisible(Videos)</visible>
-						<animation effect="slide" start="0,0" end="40,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
 					</control>
 					<control type="image">
-						<posx>625</posx>
+						<posx>67r</posx>
 						<posy>8</posy>
 						<width>40</width>
 						<height>26</height>
@@ -162,7 +184,8 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 					</control>
 					<control type="image">
-						<posx>665</posx>
+						<description> wATCHED </description>
+						<posx>30r</posx>
 						<posy>14</posy>
 						<width>20</width>
 						<height>16</height>
@@ -170,7 +193,8 @@
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 					</control>
 					<control type="image">
-						<posx>665</posx>
+						<description> resumable </description>
+						<posx>30r</posx>
 						<posy>14</posy>
 						<width>16</width>
 						<height>16</height>
@@ -179,45 +203,48 @@
 					</control>
 				</focusedlayout>
 			</control>
+
 			<control type="scrollbar" id="60">
-				<posx>760</posx>
-				<posy>85</posy>
-				<width>25</width>
+					<animation effect="slide" end="-12" center="0,0" time="200">Focus</animation>
+				<posx>1275</posx>
+				<posy>79</posy>
+				<width>20</width>
 				<height>550</height>
-				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-				<textureslidernib>ScrollBarNib.png</textureslidernib>
-				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<texturesliderbackground>solidfills/s-grey1.png</texturesliderbackground>
+				<texturesliderbar>solidfills/s-grey2.png</texturesliderbar>
+				<texturesliderbarfocus>solidfills/s-blue3.png</texturesliderbarfocus>
 				<onleft>50</onleft>
 				<onright>2</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(50)</visible>
 			</control>
+
+
+
 			<control type="group">
-				<posx>850</posx>
+				<posx>40</posx>
 				<posy>100</posy>
 				<visible>Control.IsVisible(50)</visible>
-				<control type="image">
+				<!-- <control type="image">
 					<posx>0</posx>
-					<posy>0</posy>
-					<width>360</width>
-					<height>540</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true">$VAR[PosterThumb]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
-				</control>
+					<posy>340</posy>
+					<width>400</width>
+					<height>225</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+					<visible>!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))</visible>
+					<include>Window_OpenClose_Animation</include>
+					<visible>![Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)]</visible>
+				</control>	 -->
 				<control type="image">
-					<posx>8</posx>
-					<posy>532</posy>
-					<width>344</width>
-					<height>524</height>
+					<posx>5</posx>
+					<posy>20</posy>
+					<width>280</width>
+					<height>440</height>
 					<aspectratio aligny="top">keep</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<texture diffuse="diffuse_mirror3.png" flipy="true" background="true">$VAR[PosterThumb]</texture>
+					<texture background="true">$VAR[PosterThumb]</texture>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 		</control>

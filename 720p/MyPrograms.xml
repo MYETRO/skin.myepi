@@ -1,7 +1,7 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
+	<!-- <onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload> -->
 	<views>50,51,500,550,551</views>
 	<controls>
 		<include>CommonBackground</include>
@@ -47,7 +47,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<posx>-250</posx>
+			<posx>-390</posx>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
 				<posx>0</posx>

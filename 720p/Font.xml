@@ -16,7 +16,7 @@
 	 	<font>
 			<name>font13</name>
 			<filename>Roboto-Regular.ttf</filename>
-			<size>20</size>
+			<size>25</size>
 		</font>
 	 	<font>
 			<name>font14</name>
@@ -39,6 +39,63 @@
 			<size>18</size>
 		</font>
 
+<!-- 
+
+
+	<name>font12</name>
+    <filename>arial.ttf</name>
+    <size>12</size>
+    <style>uppercase lowercase bold</style>
+    <aspect>0.75</aspect>
+    <linespacing>1.0</linespacing> 
+
+
+ -->
+
+
+MYEPi Fonts goes here  ****************
+*************************************************************************************
+
+HOME MENU
+<font>
+	<name>home</name>
+	<filename>SegoeWP-Semilight.ttf</filename>
+	<size>55</size>
+	<!-- <style>bold</style> -->
+</font>
+<font>
+	<name>home-sub</name>
+	<filename>SegoeWP-Light.ttf</filename>
+	<size>45</size>
+	<!-- <style>bold</style> -->
+</font>
+
+*************************************************************************************
+EXTRA LARGE NUMBERS:
+<font>
+	<name>numbers</name>
+	<filename>SegoeWP.ttf</filename>
+	<size>80</size>
+	<!-- <style>bold</style> -->
+</font>
+*************************************************************************************
+
+SMALL LEGENDS: 
+<font>
+	<name>smlegend</name>
+	<filename>SegoeWP.ttf</filename>
+	<size>30</size>
+	<!-- <style>bold</style> -->
+</font>
+
+
+
+
+
+
+
+
+
 
 	<!-- Title Fonts -->
 	 	<font>
@@ -51,6 +108,23 @@
 			<filename>DejaVuSans-Bold-Caps.ttf</filename>
 			<size>17</size>
 		</font>
+		<font>
+			<name>font_20title</name>
+			<filename>SegoeWP-SemiLight.ttf</filename>
+			<size>20</size>
+		</font>
+
+
+		<font>
+			<name>font_TagLine</name>
+			<filename>SegoeWP.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+			<linespacing>0.90</linespacing>
+		</font>
+
+
+
 		<font>
 			<name>font_12title</name>
 			<filename>SegoeWP-SemiLight.ttf</filename>
@@ -133,8 +207,8 @@
 
 		<font>
 			<name>font_CrazyHeader</name>
-			<filename>SegoeWP-Black.ttf</filename>
-			<size>70</size>
+			<filename>SegoeWP-Bold.ttf</filename>
+			<size>60</size>
 		</font>
 		<font>
 			<name>font_CrazyHeader175</name>
@@ -144,13 +218,49 @@
 		<font>
 			<name>font_CrazyHeaderLight60</name>
 			<filename>SegoeWP-SemiLight.ttf</filename>
-			<size>60</size>
+			<size>50</size>
+		</font>
+		<font>
+			<name>font_CrazyHeader_SemiLight45</name>
+			<filename>SegoeWP-Bold.ttf</filename>
+			<size>35</size>
+			<!-- <style>uppercase lowercase bold</style> -->
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>font_View503</name>
+			<filename>SegoeWP-Black.ttf</filename>
+			<size>34</size>
+			<!-- <style>uppercase lowercase bold</style> -->
+			<style>uppercase</style>
+			<linespacing>0.65</linespacing>
+		</font>
+		<font>
+			<name>font_View503NF</name>
+			<filename>SegoeWP-SemiLight.ttf</filename>
+			<size>24</size>
+			<!-- <style>uppercase lowercase bold</style> -->
+			<style>uppercase</style>
+			<linespacing>0.65</linespacing>
+		</font>
+		<font>
+			<name>font_CrazyHeader_SemiLightTV</name>
+			<filename>SegoeWP-Bold.ttf</filename>
+			<size>25</size>
+			<!-- <style>uppercase lowercase bold</style> -->
+			<style>uppercase</style>
+			<linespacing>0.65</linespacing>
 		</font>
 
 		<font>
 			<name>font_CrazyHeaderLight25</name>
-			<filename>SegoeWP-Light.ttf</filename>
+			<filename>SegoeWP-SemiLight.ttf</filename>
 			<size>25</size>
+		</font>
+		<font>
+			<name>font_CrazyHeaderLight30</name>
+			<filename>SegoeWP-SemiLight.ttf</filename>
+			<size>33</size>
 		</font>
 
 		<font>
@@ -166,11 +276,11 @@
 		</font>
 		<font><!-- movie Descriptions -->
 			<name>font_DescriptionM</name>
-			<filename>SegoeWP-Light.ttf</filename>
-			<size>30</size>
+			<filename>SegoeWP-SemiLight.ttf</filename>
+			<size>28</size>
 			  <!-- uppercase lowercase bold -->
      		<!-- <aspect>0.75</aspect> -->
-     		<linespacing>1.0</linespacing>
+     		<linespacing>0.95</linespacing>
 		</font>
 		<font><!-- movie Descriptions -->
 			<name>font_DescriptionEP</name>
@@ -189,6 +299,28 @@
      		<linespacing>0.9</linespacing>
 		</font>
 	</fontset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	<fontset id="DefaultNoCaps" idloc="31391" unicode="true"> 
 	<!-- Normal Fonts -->

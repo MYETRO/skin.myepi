@@ -61,7 +61,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<posx>-250</posx>
+			<posx>-390</posx>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
 				<posx>0</posx>

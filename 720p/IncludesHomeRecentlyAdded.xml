@@ -12,131 +12,74 @@
 
 <!-- Contains, Movies, TV Shows, etc. Controls -->
 			<control type="group">
-				<posx>180</posx>
-				<posy>420</posy>
+				<posx>0</posx>
+				<posy>0</posy>
 				<visible>Library.HasContent(Movies)</visible>
 				<visible>Container(9000).Hasfocus(10) + !Skin.HasSetting(HomepageHideRecentlyAddedVideo)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<posx>300</posx>
-					<posy>-200</posy>
-					<width>510</width>
-					<height>286</height>
-					<aspectratio>scale</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" fallback="Fanart_Fallback_Small.jpg" >$INFO[ListItem.Art(fanart)]</texture>
-					<bordertexture background="true" border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
-				</control>
+				
 				<control type="label"> <!-- Recent added title -->
 					<description>Title label</description>
-					<posx>820</posx>
-					<posy>60</posy>
+					<posx>530</posx>
+					<posy>50r</posy>
 					<height>20</height>
 					<width>340</width>
 					<label>20386</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font12_title</font>
+					<font>font_View503NF</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 
-				<control type="wraplist" id="8000">
-					<!-- <animation effect="slide" start="0,0" end="10,0" time="0" condition="StringCompare(Container(8000).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="180,0" time="0" condition="StringCompare(Container(8000).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="270,0" time="0" condition="StringCompare(Container(8000).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="360,0" time="0" condition="StringCompare(Container(8000).NumItems,1)">conditional</animation> -->
-					<posx>200</posx>
-					<posy>45</posy>
-					<width>890</width>
-					<height>420</height>
+
+
+						
+				<control type="fixedlist" id="8000">
+					<posx>0</posx>
+					<posy>430</posy>
+					<width>1260</width>
+					<height>500</height>
 					<onleft>8000</onleft>
 					<onright>8000</onright>
 					<onup>9001</onup>
 					<ondown>20</ondown>
 					<!-- <ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
 					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown> -->
-					<viewtype label="535">list</viewtype>
+					<viewtype label="Poster View1">icon</viewtype>
 					<pagecontrol>-</pagecontrol>
-					<scrolltime>200</scrolltime>
+					<scrolltime>60</scrolltime>
 					<orientation>Horizontal</orientation>					
-					<focusposition>0</focusposition>
-					<movement>0</movement>
-					<itemlayout height="220" width="95">
-						
-						<!-- controls backing of each added item -->
-						<!-- <control type="image">
-							<description>background</description>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>160</width> 
-							<height>200</height>
-							<texture>RecentAddedBack.png</texture>
-						</control> -->
-						<!-- This gets the poster images --><!-- 
-						<texture background="true" flipy="true" diffuse="back-blue-5.png">$INFO[ListItem.Icon]</texture> -->
+					<focusposition>3</focusposition>
+					<itemlayout height="150" width="105">						
 						<control type="image">
-							<posx>0</posx>
-							<posy>100</posy>
+							<posx>20</posx>
+							<posy>80</posy>
 							<width>100</width>
-							<height>130</height>
-							<texture background="true" diffuse="back-diffuse-white-40%-720.png" >$INFO[ListItem.Icon]</texture>
-							<!-- <colordiffuse>F4000000</colordiffuse> -->
-
-							<!-- <textureborder border="35">button-focusG.png</textureborder> -->
-							<!-- <bordertexture>button-nofocus.png</bordertexture> -->
+							<height>150</height>
+							<texture fallback="DefaultVideo.png" diffuse="tints/white-40.png" >$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
 						</control>
-														<!-- this control text title from unseletected items -->
-						<!-- <control type="label">
-							<posx>90</posx>
-							<posy>185</posy>
-							<width>150</width>
-							<height>20</height>
-							<font>font12</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-						</control> -->
 					</itemlayout>
 
-					<focusedlayout height="340" width="194">
-						<!-- <control type="image">  outer container for posters
-							<description>background</description>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>180</width>
-							<height>220</height>
-							<texture>RecentAddedBack.png</texture>
-						</control> -->
+					<focusedlayout height="155" width="130">
 						<control type="image">
 							<posx>0</posx>
-							<posy>0</posy>
-							<width>230</width>
-							<height>240</height>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="15">folder-focus.png</bordertexture>
+							<posy></posy>
+							<width>170</width>
+							<height>265</height>
+							<texture fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+							<bordertexture>solidfills/s-blue4.png</bordertexture>
 							<bordersize>5</bordersize>
-							<visible>Control.HasFocus(8000)</visible>
-						</control>
-						<control type="image"> <!-- Poster -->
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>230</width>
-							<height>240</height>
-							<texture>$INFO[ListItem.Icon]</texture>
-							<bordersize>10</bordersize>
-							<visible>!Control.HasFocus(8000)</visible>
+							<!-- <visible>Control.HasFocus(8000)</visible> -->
 						</control>
 						<control type="label">
-							<posx>208</posx>
-							<posy>50</posy>
+							<posx>180</posx>
+							<posy>20</posy>
 							<width>700</width>
 							<height>20</height>
-							<font>font_13title</font>
+							<font>home-sub</font>
 							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<align>left</align>
@@ -146,13 +89,16 @@
 					</focusedlayout>
 
 
+					
+
 					<content>
+			
 						<item>
 							<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
 							<label2></label2>
 							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.1.Path)])</onclick>
 							<icon>$INFO[Window.Property(LatestMovie.1.Thumb)]</icon>
-							<thumb>-</thumb>
+							<thumb>$INFO[Window.Property(LatestMovie.1.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.1.Title))</visible>
 						</item>
 						<item>
@@ -160,7 +106,7 @@
 							<label2></label2>
 							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.2.Path)])</onclick>
 							<icon>$INFO[Window.Property(LatestMovie.2.Thumb)]</icon>
-							<thumb>-</thumb>
+							<thumb>$INFO[Window.Property(LatestMovie.2.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.2.Title))</visible>
 						</item>
 						<item>
@@ -168,7 +114,7 @@
 							<label2></label2>
 							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.3.Path)])</onclick>
 							<icon>$INFO[Window.Property(LatestMovie.3.Thumb)]</icon>
-							<thumb>-</thumb>
+							<thumb>$INFO[Window.Property(LatestMovie.3.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.3.Title))</visible>
 						</item>
 						<item>
@@ -176,7 +122,7 @@
 							<label2></label2>
 							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.4.Path)])</onclick>
 							<icon>$INFO[Window.Property(LatestMovie.4.Thumb)]</icon>
-							<thumb>-</thumb>
+							<thumb>$INFO[Window.Property(LatestMovie.4.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.4.Title))</visible>
 						</item>
 						<item>
@@ -184,7 +130,7 @@
 							<label2></label2>
 							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.5.Path)])</onclick>
 							<icon>$INFO[Window.Property(LatestMovie.5.Thumb)]</icon>
-							<thumb>-</thumb>
+							<thumb>$INFO[Window.Property(LatestMovie.5.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.5.Title))</visible>
 						</item>
 						<item>
@@ -192,7 +138,7 @@
 							<label2></label2>
 							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.6.Path)])</onclick>
 							<icon>$INFO[Window.Property(LatestMovie.6.Thumb)]</icon>
-							<thumb>-</thumb>
+							<thumb>$INFO[Window.Property(LatestMovie.6.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.6.Title))</visible>
 						</item>
 						<item>
@@ -200,7 +146,7 @@
 							<label2></label2>
 							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.7.Path)])</onclick>
 							<icon>$INFO[Window.Property(LatestMovie.7.Thumb)]</icon>
-							<thumb>-</thumb>
+							<thumb>$INFO[Window.Property(LatestMovie.7.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.7.Title))</visible>
 						</item>
 						<item>
@@ -208,7 +154,7 @@
 							<label2></label2>
 							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.8.Path)])</onclick>
 							<icon>$INFO[Window.Property(LatestMovie.8.Thumb)]</icon>
-							<thumb>-</thumb>
+							<thumb>$INFO[Window.Property(LatestMovie.8.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.8.Title))</visible>
 						</item>
 						<item>
@@ -216,7 +162,7 @@
 							<label2></label2>
 							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.9.Path)])</onclick>
 							<icon>$INFO[Window.Property(LatestMovie.9.Thumb)]</icon>
-							<thumb>-</thumb>
+							<thumb>$INFO[Window.Property(LatestMovie.9.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.9.Title))</visible>
 						</item>
 						<item>
@@ -224,44 +170,26 @@
 							<label2></label2>
 							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.10.Path)])</onclick>
 							<icon>$INFO[Window.Property(LatestMovie.10.Thumb)]</icon>
-							<thumb>-</thumb>
+							<thumb>$INFO[Window.Property(LatestMovie.10.Thumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.10.Title))</visible>
 						</item>
 					</content>
+
 				</control>
-				<!-- Arrow for list box -->
-				<control type="button">
-					<description>left Arrow</description>
-					<posx>170</posx>
-					<posy>190</posy>
-					<width>40</width>
-					<height>40</height>
-					<texturefocus>arrow-left-90%.png</texturefocus>
-					<texturenofocus>arrow-left-90%.png</texturenofocus>
-					<onclick>Control.Move(8000,-1)</onclick>
-					<visible>Control.HasFocus(8000) + Container(8000).HasPrevious</visible>
-					<include>VisibleFadeEffect</include>
-				</control>
+
 				<!-- <control type="image">
-					<description>background top image</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>340</width>
-					<height>30</height>
-					<texture>black-back-40%.png</texture>
-				</control> -->
-				<control type="button">
-					<description>right Arrow</description>
-					<posx>980</posx>
-					<posy>190</posy>
-					<width>40</width>
-					<height>40</height>
-					<texturefocus>arrow-right-90%.png</texturefocus>
-					<texturenofocus>arrow-right-90%.png</texturenofocus>
-					<onclick>Control.Move(8000,1)</onclick>
-					<visible>Control.HasFocus(8000) + Container(8000).HasNext</visible>
-					<include>VisibleFadeEffect</include>
-				</control>
+						<posx>176</posx>
+						<posy>288</posy>
+						<width>215</width>
+						<height>315</height>
+						<texture fallback="defaultvideo.png" background="true" >$INFO[ListItem.Thumb]</texture>
+						<fadetime>200</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>IsEmpty(ListItem.Icon)</visible>
+						<bordersize>4</bordersize>
+					</control> -->
+				<!-- Arrow for list box -->
+				
 			</control>
 
 
@@ -284,25 +212,87 @@ TV Shows    TV SHOWS    TV SHOWS     TV SHOWS      TV SHOWS
 *
 * -->
 			<control type="group">
-				<posx>160</posx>
-				<posy>50</posy>
+				<animation type="WindowOpen" reversible="false">
+				<effect type="slide" start="-500" end="0" center="640,360" easing="out" tween="back" time="600" />
+				<effect type="fade" start="0" end="100" time="400" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="slide" start="0" end="-500" center="640,360" easing="out"  time="200" />
+				<effect type="fade" start="100" end="0" time="200" />
+			</animation>	
+
+				<posx>0</posx>
+				<posy>0</posy>
 				<visible>Library.HasContent(TVShows)</visible>
 				<visible>Container(9000).Hasfocus(11) + !Skin.HasSetting(HomepageHideRecentlyAddedVideo)</visible>
-				<include>VisibleFadeEffect</include>
-				<control type="label">
+				<control type="label"> <!-- Recent added title -->
 					<description>Title label</description>
-					<posx>240</posx>
-					<posy>220</posy>
+					<posx>580</posx>
+					<posy>50r</posy>
 					<height>20</height>
-					<width>480</width>
+					<width>340</width>
 					<label>20387</label>
-					<align>center</align>
+					<align>left</align>
 					<aligny>center</aligny>
-					<font>font12_title</font>
+					<font>font_View503NF</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
-				<control type="list" id="8001">
+
+				<control type="fixedlist" id="8001">
+					<posx>0</posx>
+					<posy>420</posy>
+					<width>1260</width>
+					<height>500</height>
+					<onleft>8001</onleft>
+					<onright>8001</onright>
+					<onup>9001</onup>
+					<ondown>20</ondown>
+					<!-- <ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
+					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown> -->
+					<viewtype label="Poster View1">icon</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>60</scrolltime>
+					<orientation>Horizontal</orientation>					
+					<focusposition>3</focusposition>
+					<itemlayout height="150" width="105">						
+						<control type="image">
+							<posx>20</posx>
+							<posy>80</posy>
+							<width>100</width>
+							<height>150</height>
+							<texture fallback="DefaultVideo.png" diffuse="tints/white-40.png" >$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
+					</itemlayout>
+
+					<focusedlayout height="250" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>250</width>
+							<height>250</height>
+							<texture fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+							<bordertexture>solidfills/s-blue4.png</bordertexture>
+							<bordersize>5</bordersize>
+							<!-- <visible>Control.HasFocus(8000)</visible> -->
+						</control>
+						<control type="label">
+							<posx>260</posx>
+							<posy>25</posy>
+							<width>700</width>
+							<height>20</height>
+							<font>home-sub</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+
+				<!-- <control type="list" id="8001">
 					<animation effect="slide" start="0,0" end="120,0" time="0" condition="StringCompare(Container(8001).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="240,0" time="0" condition="StringCompare(Container(8001).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="360,0" time="0" condition="StringCompare(Container(8001).NumItems,1)">conditional</animation>
@@ -320,7 +310,7 @@ TV Shows    TV SHOWS    TV SHOWS     TV SHOWS      TV SHOWS
 					<scrolltime>200</scrolltime>
 					<orientation>Horizontal</orientation>
 					<focusposition>1</focusposition>
-					<movement>2</movement>
+					<movement>1</movement>
 					<itemlayout height="220" width="240">
 						<control type="image">
 							<description>background</description>
@@ -437,7 +427,7 @@ TV Shows    TV SHOWS    TV SHOWS     TV SHOWS      TV SHOWS
 							<label>$INFO[ListItem.Label]</label>
 							<visible>Control.HasFocus(8001)</visible>
 						</control>
-					</focusedlayout>
+					</focusedlayout> -->
 					<content>
 						<item>
 							<label>$INFO[Window.Property(LatestEpisode.1.EpisodeTitle)]</label>
@@ -521,7 +511,7 @@ TV Shows    TV SHOWS    TV SHOWS     TV SHOWS      TV SHOWS
 						</item>
 					</content>
 				</control>
-				<control type="button">
+				<!-- <control type="button">
 					<description>left Arrow</description>
 					<posx>-40</posx>
 					<posy>90</posy>
@@ -544,7 +534,7 @@ TV Shows    TV SHOWS    TV SHOWS     TV SHOWS      TV SHOWS
 					<onclick>Control.Move(8001,1)</onclick>
 					<visible>Control.HasFocus(8001) + Container(8001).HasNext</visible>
 					<include>VisibleFadeEffect</include>
-				</control>
+				</control> -->
 			</control>
 
 
@@ -565,158 +555,78 @@ MUSIC   Music
 * -->
 
 			<control type="group">
-				<posx>240</posx>
-				<posy>50</posy>
+				<posx>0</posx>
+				<posy>0</posy>
 				<visible>Library.HasContent(Music)</visible>
 				<visible>Container(9000).Hasfocus(3) + !Skin.HasSetting(HomepageHideRecentlyAddedAlbums)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="label">
+				<control type="label"> <!-- Recent added title -->
 					<description>Title label</description>
-					<posx>160</posx>
-					<posy>220</posy>
+					<posx>580</posx>
+					<posy>50r</posy>
 					<height>20</height>
-					<width>480</width>
-					<label>359</label>
-					<align>center</align>
+					<width>340</width>
+					<label>Recently added music</label>
+					<align>left</align>
 					<aligny>center</aligny>
-					<font>font12_title</font>
+					<font>font_View503NF</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
-				<control type="list" id="8002">
-					<animation effect="slide" start="0,0" end="100,0" time="0" condition="StringCompare(Container(8002).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="200,0" time="0" condition="StringCompare(Container(8002).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="300,0" time="0" condition="StringCompare(Container(8002).NumItems,1)">conditional</animation>
+
+				<control type="fixedlist" id="8002">
 					<posx>0</posx>
-					<posy>0</posy>
-					<width>800</width>
-					<height>240</height>
+					<posy>420</posy>
+					<width>1260</width>
+					<height>500</height>
 					<onleft>8002</onleft>
 					<onright>8002</onright>
-					<onup>20</onup>
-					<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
-					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
-					<viewtype label="535">list</viewtype>
+					<onup>9001</onup>
+					<ondown>20</ondown>
+					<!-- <ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
+					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown> -->
+					<viewtype label="Poster View1">icon</viewtype>
 					<pagecontrol>-</pagecontrol>
-					<scrolltime>200</scrolltime>
-					<orientation>Horizontal</orientation>
-					<itemlayout height="220" width="200">
+					<scrolltime>60</scrolltime>
+					<orientation>Horizontal</orientation>					
+					<focusposition>3</focusposition>
+					<itemlayout height="150" width="105">						
 						<control type="image">
-							<description>background</description>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>200</width>
-							<height>220</height>
-							<texture border="15">RecentAddedBack.png</texture>
-						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>180</width>
-							<height>155</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
-						</control>
-						<control type="label">
-							<posx>100</posx>
-							<posy>170</posy>
-							<width>180</width>
-							<height>20</height>
-							<font>font10</font>
-							<textcolor>grey2</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-						<control type="label">
-							<posx>100</posx>
-							<posy>190</posy>
-							<width>180</width>
-							<height>20</height>
-							<font>font12</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
+							<posx>20</posx>
+							<posy>80</posy>
+							<width>100</width>
+							<height>150</height>
+							<texture fallback="DefaultArtist.png" diffuse="tints/white-40.png" >$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
 						</control>
 					</itemlayout>
-					<focusedlayout height="220" width="200">
+
+					<focusedlayout height="250" width="230">
 						<control type="image">
-							<description>background</description>
 							<posx>0</posx>
-							<posy>0</posy>
-							<width>200</width>
-							<height>220</height>
-							<texture border="15">RecentAddedBack.png</texture>
-						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>180</width>
-							<height>155</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<posy>20</posy>
+							<width>250</width>
+							<height>250</height>
+							<texture fallback="DefaultArtist.png">$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+							<bordertexture>solidfills/s-blue4.png</bordertexture>
 							<bordersize>5</bordersize>
-							<visible>Control.HasFocus(8002)</visible>
-						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>180</width>
-							<height>155</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
-							<visible>!Control.HasFocus(8002)</visible>
+							<!-- <visible>Control.HasFocus(8000)</visible> -->
 						</control>
 						<control type="label">
-							<posx>100</posx>
-							<posy>170</posy>
-							<width>180</width>
+							<posx>260</posx>
+							<posy>25</posy>
+							<width>700</width>
 							<height>20</height>
-							<font>font10</font>
-							<textcolor>grey2</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-						<control type="label">
-							<posx>100</posx>
-							<posy>190</posy>
-							<width>180</width>
-							<height>20</height>
-							<font>font12</font>
+							<font>home-sub</font>
 							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
 							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
+							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<posx>100</posx>
-							<posy>190</posy>
-							<width>180</width>
-							<height>20</height>
-							<font>font12</font>
-							<textcolor>blue</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>Control.HasFocus(8002)</visible>
 						</control>
 					</focusedlayout>
+
 					<content>
 						<item>
 							<label>$INFO[Window.Property(LatestAlbum.1.Title)]</label>
@@ -809,30 +719,6 @@ MUSIC   Music
 							<visible>!IsEmpty(Window.Property(LatestAlbum.10.Title))</visible>
 						</item>
 					</content>
-				</control>
-				<control type="button">
-					<description>left Arrow</description>
-					<posx>-40</posx>
-					<posy>90</posy>
-					<width>30</width>
-					<height>40</height>
-					<texturefocus>arrow-big-left.png</texturefocus>
-					<texturenofocus>arrow-big-left.png</texturenofocus>
-					<onclick>Control.Move(8002,-1)</onclick>
-					<visible>Control.HasFocus(8002) + Container(8002).HasPrevious</visible>
-					<include>VisibleFadeEffect</include>
-				</control>
-				<control type="button">
-					<description>right Arrow</description>
-					<posx>810</posx>
-					<posy>90</posy>
-					<width>30</width>
-					<height>40</height>
-					<texturefocus>arrow-big-right.png</texturefocus>
-					<texturenofocus>arrow-big-right.png</texturenofocus>
-					<onclick>Control.Move(8002,1)</onclick>
-					<visible>Control.HasFocus(8002) + Container(8002).HasNext</visible>
-					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 		</control>

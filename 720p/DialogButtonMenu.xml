@@ -106,7 +106,7 @@
 
 
 	Reload Skin button		
-			<control type="button" id="1630">
+			<!-- <control type="button" id="1630">
 				<description>Reload Skin</description>
 				<width>340</width>
 				<height>40</height>
@@ -117,11 +117,10 @@
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>XBMC.ReloadSkin()</onclick>
-				<!-- <visible>System.CanPowerDown</visible> -->
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
 				<label>Reload Skin</label>
-			</control>
+			</control> -->
 
 
 

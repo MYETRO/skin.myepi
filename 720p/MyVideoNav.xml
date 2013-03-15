@@ -1,83 +1,89 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>504,50,51,500,550,551,560,501,508,503,515,505,511</views>
-	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
+	<views>52,503,504,50,<!--51, 500,501,515,508, -->550,551,560,505,511</views>
+	<!-- <onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>  This is the Tutorial First run, will do this in future  -->
 	<onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
 	<controls>
-		<include>CommonBackground</include>
-		<include>ContentPanelBackgrounds</include>
+		<!--  <include>CommonBackground</include>--> THIS REMOVES THE BACKGROUND IN Library view for TV, movie 
+		<!--<include>ContentPanelBackgrounds</include> -->
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>	
-			<include>MediaListView2</include> <!-- MediaInfo view id = 504 -->	
+				
 			<include>CommonRootView</include> <!-- view id = 50 -->
 			<include>FullWidthList</include> <!-- view id = 51 -->
-			<include>ThumbnailView</include> <!-- view id = 500 -->
-			<include>PosterWrapView</include> <!-- view id = 501 -->
-			<include>PosterWrapView2_Fanart</include> <!-- view id = 508 -->
-			<include>MediaListView3</include> <!-- view id = 503 Media Info 2-->
-			<!-- <include>MediaListViewPi</include>   <!-- 504 -->
+			<!-- <include>ThumbnailView</include> --> <!-- view id = 500 -->
+			<!-- <include>PosterWrapView</include> --> <!-- view id = 501 -->
+			<!-- <include>PosterWrapView2_Fanart</include> --> <!-- view id = 508 -->
 			
-			<include>MediaListView4</include> <!-- view id = 515 -->
+			<!-- <include>MediaListViewPi</include>   <!-- 504 -->
+
+
+			<include>MYE_Info</include>    <!-- id *** 52 *** -->
+			<include>MYE_Fanart</include> <!-- view id = 503 Media Info 2-->
+			<include>MYE_ListView2</include> <!-- MediaInfo view id = 504 -->
+			<!-- <include>MediaListView4</include> --> <!-- view id = 515 -->
 			<include>WideIconView</include> <!-- view id = 505 -->
 			<include>MusicVideoInfoListView</include> <!-- view id = 511 -->
-			<include>AddonInfoListView1</include> <!-- view id = 550 -->
-			<include>AddonInfoThumbView1</include> <!-- view id = 551 -->
+			<!-- <include>MYE_AddonInfo</include>504 -->
+			<include>MYE_AddonInfo x</include> <!-- view id = 550 -->
+			<include>MYE_AddonThumb x</include> <!-- view id = 551 -->
 			<include>LiveTVView1</include> <!-- view id = 560 -->
 		</control>
 		<include>CommonPageCount</include>
 		<include>CommonNowPlaying</include>
 		<include>MainWindowMouseButtons</include>
 		<include>BehindDialogFadeOut</include>
-		<include>ScrollOffsetLabel</include>
+		<!-- <include>ScrollOffsetLabel</include> -->
 		<include>ScrollOffsetLabel_MYEPi</include>
-		<control type="image">
-			<description>Section header image</description>
-			<posx>20</posx>
-			<posy>3</posy>
-			<width>35</width>
-			<height>35</height>
-			<aspectratio>keep</aspectratio>
-			<texture>icon_video.png</texture>
-		</control>
-		<control type="grouplist">
-			<posx>65</posx>
-			<posy>5</posy>
-			<width>1000</width>
-			<height>30</height>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<itemgap>5</itemgap>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<label>$LOCALIZE[3]</label>
+		<control type="group">
+			<control type="image">
+				<description>Section header image</description>
+				<posx>20</posx>
+				<posy>3</posy>
+				<width>35</width>
+				<height>35</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon_video.png</texture>
 			</control>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<label>[COLOR=blue] - [/COLOR]$INFO[Container.FolderName]</label>
-				<visible>!IsEmpty(Container.FolderName)</visible>
+			<control type="grouplist">
+				<posx>65</posx>
+				<posy>5</posy>
+				<width>1000</width>
+				<height>30</height>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<itemgap>5</itemgap>
+				<control type="label">
+					<include>WindowTitleCommons</include>
+					<label>VIDEOS</label>
+				</control>
+				<!-- <control type="label">
+					<include>WindowTitleCommons</include>
+					<label>[B][COLOR=blue] - [/COLOR][/B]$INFO[Container.FolderName]</label>
+					<visible>!IsEmpty(Container.FolderName)</visible>
+				</control> -->
 			</control>
-		</control>
-
+		</control>	
 
 
 Side Menu Options  - -   Text only
 		<control type="group">
-			<posx>-250</posx>
+			<posx>-390</posx>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">   text inside panel
-				<posx>15</posx>
+				<posx>0</posx>
 				<posy>110</posy>
-				<width>250</width>
+				<width>390</width>
 				<height>600</height>
-				<onleft>9000</onleft>
+				<onleft>60</onleft>
 				<onright>50</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<onback>50</onback>
 				<itemgap>0</itemgap>
 				<control type="label" id="200">
-					<width>250</width>
+					<width>350</width>
 					<height>35</height>
 					<font>font12</font>
 					<label>31006</label>
@@ -99,7 +105,7 @@ Side Menu Options  - -   Text only
 				<control type="togglebutton" id="4">
 					<description>Sort asc</description>
 					<include>ButtonCommonValues</include>
-					<alttexturefocus border="5">button-focus.png</alttexturefocus>
+					<alttexturefocus>solidfills/s-blue2.png</alttexturefocus>
 					<alttexturenofocus>-</alttexturenofocus>
 					<label>31051</label>
 					<altlabel>31050</altlabel>

@@ -1,6 +1,6 @@
 <includes>
 	<include name="CommonBackground">
-		<control type="image">
+		<!-- <control type="image">
 			<description>Normal Default Background Image</description>
 			<posx>0</posx>
 			<posy>0</posy>
@@ -9,7 +9,6 @@
 			<aspectratio>scale</aspectratio>
 			<texture>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
 			<visible>![Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))]</visible>
-			<visible>!Control.IsVisible(503) + !Control.IsVisible(504)</visible>
 			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="image">
@@ -22,8 +21,10 @@
 			<texture>$INFO[Skin.String(CustomBackgroundPath)]</texture>
 			<visible>Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))</visible>
 			<include>VisibleFadeEffect</include>
-		</control>
-		<control type="image">
+		</control> -->
+
+
+		<!-- <control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -35,7 +36,9 @@
 			<visible>!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))</visible>
 			<include>Window_OpenClose_Animation</include>
 			<visible>![Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)]</visible>
-		</control>
+		</control> -->
+
+		
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
