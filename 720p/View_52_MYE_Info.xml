@@ -42,7 +42,7 @@ Media Info 2 - Correct
 					<texture>gradients/View52-gradient.png</texture>
 				</control>
 				<control type="image"> 	
-					<description>FANART BIG PANEL</description>	
+					<description>FANART PANEL</description>	
 					<posx>305</posx>
 					<posy>285</posy>
 					<width>564</width>

@@ -999,14 +999,14 @@ stuff like that
 							<posy></posy>
 							<width>180</width>
 							<height>180</height>
-							<texture>solidfills/s-blue4.png</texture>
+							<texture>solidfills/s-blue3.png</texture>
 						</control>
 						<control type="image">
 							<posx></posx>
 							<posy></posy>
 							<width>180</width>
 							<height>180</height>
-							<texture>solidfills/s-blue4.png</texture>
+							<texture>tints/black-70.png</texture>
 						</control>
 						<!-- <control type="image">
 							<posx></posx>
@@ -1308,26 +1308,45 @@ stuff like that
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			<!-- CONTROLS THE LIST OF BUTTONS, VIDEOS, WEATHER AND SO ON -->
 			<control type="fixedlist" id="9000">
 				<!-- <animation effect="zoom" end="100" center="0,0" time="200">Focus</animation>
 				<animation effect="zoom" end="100" center="0,0"  time="200">UnFocus</animation> -->
 				<!-- condition="Control.HasFocus(9001)" -->
 				<posx>45</posx>
-				<posy>40</posy>
+				<posy>45</posy>
 				<width>290</width>
 				<height>610</height>
-				<onright>9001</onright>
-				<onleft>9002</onleft>
-				<!-- <ondown>0</ondown> -->
+				<!-- <onright>9001</onright> -->
+				<!-- <onleft>9002</onleft> -->
+				<onleft>9001</onleft> sub menu
+				
+				<ondown>20</ondown> 	favourites
+				<onright>9003</onright> 	recent
+				<onright>600</onright> 		now playing
 				<!-- <texture>button-focus.png</texture> -->
 				<pagecontrol>-</pagecontrol>
-				<scrolltime>200</scrolltime>
+				<scrolltime>100</scrolltime>
 				<focusposition>4</focusposition>
 				<movement>0</movement>
 				<orientation>Vertical</orientation>
 								
-				<itemlayout height="45" width="5"><!-- <control type="image"> <!-- control individiual text entries eg. videos -->
+				<itemlayout height="45" width="150"><!-- <control type="image"> <!-- control individiual text entries eg. videos -->
 					<control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -1357,18 +1376,18 @@ stuff like that
 						<!-- <label>system</label> -->
 					</control>
 					<!-- hover effect -->
-					<!-- <control type="label">
+					<control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>420</width>
 						<height>auto</height>
 						<font>home</font>
-						<textcolor>blue2</textcolor>
+						<textcolor>blue</textcolor>
 						<align>left</align>
 						<aligny>left</aligny>
 						<label>[LOWERCASE]$INFO[ListItem.Label][/LOWERCASE]</label>
 						<visible>Control.HasFocus(9000)</visible>
-					</control> -->
+					</control>
 				</focusedlayout>
 
 				
@@ -1399,8 +1418,11 @@ stuff like that
 					</item>
 					<item id="2">
 						<label>3</label>
-						<onclick condition="StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick>
-						<onclick condition="!StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos,root)</onclick>
+
+						Uncomment to make sure last location is remembered when click in videos
+						<!-- <onclick condition="StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick> 
+						<onclick condition="!StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos,root)</onclick>-->
+						<onclick>ActivateWindow(Videos,root)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
@@ -1533,29 +1555,29 @@ SubMainMenu ****************************
 			<control type="group" id="9001">  
 
 				
-<!-- <animation effect="fade" delay="700" start="0,0" end="100,0" time="1000"></animation>
-<animation type="focus" effect="slide" start="0,0" end="100,400" time="100" reversible="false"></animation> -->
-<!-- controls position animation for SubMenu -->
-<animation type="Focus"> 
-	<effect type="slide" start="0" end="245,0" time="200"/>
-</animation><!-- 
-<animation type="UnFocus"> 
-	<effect type="slide" start="330,35" end="0,0" time="200"/>
-</animation> -->
+				<!-- <animation effect="fade" delay="700" start="0,0" end="100,0" time="1000"></animation>
+				<animation type="focus" effect="slide" start="0,0" end="100,400" time="100" reversible="false"></animation> -->
+				<!-- controls position animation for SubMenu -->
+				<animation type="Focus"> 
+					<effect type="slide" start="0" end="245,0" time="200"/>
+				</animation><!-- 
+				<animation type="UnFocus"> 
+					<effect type="slide" start="330,35" end="0,0" time="200"/>
+				</animation> -->
 
 
-<!-- <animation type="UnFocus"> 
-	<effect type="slide" end="-300,0" time="200"/>
-	 <effect type="zoom" end="100" center="auto" time="200"/>
-	 <effect type="rotate" end="-180" center="250,50" time="200"/>
-</animation> --> <!-- 
-<animation effect="zoom" end="80" center="0" time="200">UnFocus</animation>
-<animation effect="zoom" end="100" center="0" time="100">Focus</animation>  -->
+				<!-- <animation type="UnFocus"> 
+					<effect type="slide" end="-300,0" time="200"/>
+					 <effect type="zoom" end="100" center="auto" time="200"/>
+					 <effect type="rotate" end="-180" center="250,50" time="200"/>
+				</animation> --> <!-- 
+				<animation effect="zoom" end="80" center="0" time="200">UnFocus</animation>
+				<animation effect="zoom" end="100" center="0" time="100">Focus</animation>  -->
 				<posx>-363</posx>
 				<posy>250</posy>
 				<width>400</width>
 				<onleft>9000</onleft>
-				<onright>600</onright>
+				<onright>9003</onright>
 				<!-- <textoffsetx>10</textoffsetx> -->
 				
 				<control type="image">

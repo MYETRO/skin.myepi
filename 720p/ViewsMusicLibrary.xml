@@ -226,6 +226,9 @@
 			</control>
 		</control>
 	</include>
+
+
+	
 	<include name="AlbumWrapView2_Fanart">
 		<control type="group">
 			<posx>0</posx>

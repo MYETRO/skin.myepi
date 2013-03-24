@@ -9,7 +9,7 @@
 	<controls>
 		<control type="button" id="1000">
 			<description>Close Window button</description>
-			<posx>84r</posx>
+			<posx>64r</posx>
 			<posy>0</posy>
 			<width>64</width>
 			<height>32</height>
@@ -26,22 +26,32 @@
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 		</control>
+
+		<!-- Seek slider, for when you click on progree bar to skip  -->
 		<control type="slider" id="87">
 			<description>Seek Slider</description>
 			<posx>430</posx>
-			<posy>82r</posy>
+			<posy>16r</posy>
 			<width>720</width>
 			<height>16</height>
 			<onup>702</onup>
 			<ondown>26</ondown>
 			<action>seek</action>
 			<texturesliderbar>seekslider2.png</texturesliderbar>
-			<textureslidernib>osd_slider_nibNF.png</textureslidernib>
-			<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+			<!-- <texturesliderbar>solidfills/s-grey1.png</texturesliderbar> -->
+			<!-- <texturesliderbar>tints/white-50.png</texturesliderbar> -->
+			<textureslidernib>solidfills/s-blue4.png</textureslidernib>
+			<textureslidernibfocus>solidfills/s-blue4.png</textureslidernibfocus>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
 		</control>
-		<!-- !LiveTV -->
+		<!-- PLAY _ PAUSE _ SKIP _ 
+
+		***************
+		PLAYER CONTROLS   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+		***************
+
+		 !LiveTV -->
 		<control type="group" id="100">
 			<posx>325</posx>
 			<posy>60r</posy>
@@ -288,10 +298,10 @@
 			</control>
 		</control>
 
-		<!-- !LiveTV -->
+		<!--  SETTINGS BUTTONS --- ********************** !LiveTV -->
 		<control type="group">
-			<posx>300r</posx>
-			<posy>60r</posy>
+			<posx>200</posx>
+			<posy>55</posy>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 			<visible>!VideoPlayer.Content(LiveTV)</visible>

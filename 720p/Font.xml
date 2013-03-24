@@ -75,7 +75,7 @@ EXTRA LARGE NUMBERS:
 <font>
 	<name>numbers</name>
 	<filename>SegoeWP.ttf</filename>
-	<size>80</size>
+	<size>55</size>
 	<!-- <style>bold</style> -->
 </font>
 *************************************************************************************
@@ -88,6 +88,58 @@ SMALL LEGENDS:
 	<!-- <style>bold</style> -->
 </font>
 
+
+
+************************
+TYPE:	SemiLight
+SIZE:	20, 25, 30, 35, 40
+<font>
+	<name>semilight20</name>
+	<filename>SegoeWP-Semilight.ttf</filename>
+	<size>20</size>
+	<linespacing>0.8</linespacing>
+	<!-- <style>bold</style> -->
+</font>
+<font>
+	<name>semilight25</name>
+	<filename>SegoeWP-Semilight.ttf</filename>
+	<size>25</size>
+	<linespacing>0.8</linespacing>
+	<!-- <style>bold</style> -->
+</font>
+<font>
+	<name>semilight30</name>
+	<filename>SegoeWP-Semilight.ttf</filename>
+	<size>30</size>
+	<linespacing>0.8</linespacing>
+	<!-- <style>bold</style> -->
+</font>
+<font>
+	<name>semilight35</name>
+	<filename>SegoeWP-Semilight.ttf</filename>
+	<size>35</size>
+	<linespacing>0.8</linespacing>
+	<!-- <style>bold</style> -->
+</font>
+<font>
+	<name>semilight40</name>
+	<filename>SegoeWP-Semilight.ttf</filename>
+	<size>40</size>
+	<linespacing>0.8</linespacing>
+	<!-- <style>bold</style> -->
+</font>
+
+
+*************************************************************************************
+XBIAN QUICK SETUP SCREEN DIALOG:
+<font>
+	<name>message</name>
+	<filename>SegoeWP-Semilight.ttf</filename>
+	<size>28</size>
+	<linespacing>0.8</linespacing>
+
+	<!-- <style>bold</style> -->
+</font>
 
 
 

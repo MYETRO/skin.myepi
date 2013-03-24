@@ -13,7 +13,7 @@
 					<texture>solidfills/s-greydark.png</texture>
 					<!-- <visible>Container.Content(Movies)</visible> -->
 			</control>
-			<!-- <include>VisibleFadeEffect</include> -->
+			<include>VisibleFadeEffect</include>
 			<control type="list" id="50">
 				<posx>345</posx>
 				<posy>78</posy>
@@ -23,7 +23,7 @@
 				<onright>60</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>
-				<viewtype label="535">list</viewtype>
+				<viewtype label="MYE List">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>80</scrolltime>
 				<focusposition>6</focusposition>
@@ -205,7 +205,7 @@
 			</control>
 
 			<control type="scrollbar" id="60">
-					<animation effect="slide" end="-12" center="0,0" time="200">Focus</animation>
+				<animation effect="slide" end="-12" center="0,0" time="200">Focus</animation>
 				<posx>1275</posx>
 				<posy>79</posy>
 				<width>20</width>
@@ -428,13 +428,13 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
-				<posx>1170</posx>
+				<posx>70</posx>
 				<posy>80</posy>
-				<width>25</width>
+				<width>55</width>
 				<height>550</height>
-				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbackground>ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar>ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus>ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>500</onleft>
@@ -511,7 +511,7 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
-				<posx>1170</posx>
+				<posx>70</posx>
 				<posy>80</posy>
 				<width>25</width>
 				<height>550</height>

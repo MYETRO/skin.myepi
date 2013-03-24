@@ -1,7 +1,7 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>52,503,504,50,<!--51, 500,501,515,508, -->550,551,560,505,511</views>
+	<views>52,503,504,564,565,50,<!--51, 500,501,515,508, 550,551,-->560,<!-- 505, -->511</views>
 	<!-- <onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>  This is the Tutorial First run, will do this in future  -->
 	<onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
 	<controls>
@@ -11,7 +11,7 @@
 			<include>Window_OpenClose_Animation</include>	
 				
 			<include>CommonRootView</include> <!-- view id = 50 -->
-			<include>FullWidthList</include> <!-- view id = 51 -->
+			<!-- <include>FullWidthList</include> --> <!-- view id = 51 -->
 			<!-- <include>ThumbnailView</include> --> <!-- view id = 500 -->
 			<!-- <include>PosterWrapView</include> --> <!-- view id = 501 -->
 			<!-- <include>PosterWrapView2_Fanart</include> --> <!-- view id = 508 -->
@@ -22,12 +22,14 @@
 			<include>MYE_Info</include>    <!-- id *** 52 *** -->
 			<include>MYE_Fanart</include> <!-- view id = 503 Media Info 2-->
 			<include>MYE_ListView2</include> <!-- MediaInfo view id = 504 -->
+			<include>MYE_Original</include> <!-- MYE Original view id = 564  View_564_MYE_Original.xml -->
+			<include>MYE_PosterFan</include>
 			<!-- <include>MediaListView4</include> --> <!-- view id = 515 -->
-			<include>WideIconView</include> <!-- view id = 505 -->
+			<!-- <include>WideIconView</include> --> <!-- view id = 505 -->
 			<include>MusicVideoInfoListView</include> <!-- view id = 511 -->
 			<!-- <include>MYE_AddonInfo</include>504 -->
-			<include>MYE_AddonInfo x</include> <!-- view id = 550 -->
-			<include>MYE_AddonThumb x</include> <!-- view id = 551 -->
+			<!-- <include>MYE_AddonInfo</include>  --><!-- view id = 550 -->
+			<!-- <include>MYE_AddonThumb</include> --> <!-- view id = 551 -->
 			<include>LiveTVView1</include> <!-- view id = 560 -->
 		</control>
 		<include>CommonPageCount</include>

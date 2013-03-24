@@ -1,14 +1,17 @@
 <includes>
 	<include name="HomeRecentlyAddedInfo">
 		<control type="group" id="9003">
-			<onup>9002</onup>
-			<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
-			<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
+
+			<!-- <onup>9000</onup> -->
+
+			<!-- <ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
+			<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown> -->
 			<visible>!Window.IsVisible(Favourites)</visible>
 			<include>VisibleFadeEffect</include>
-			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
-			<animation effect="fade" time="200">WindowClose</animation>
-			
+			<!-- <animation effect="fade" time="300" delay="1000">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation> -->
+			<animation effect="slide" start="-245,0" end="0,0" easing="out" tween="back" time="600">WindowOpen</animation>
+			<animation effect="slide" start="-245,0" end="0,0" easing="out" tween="back" time="600">WindowClose</animation>
 
 <!-- Contains, Movies, TV Shows, etc. Controls -->
 			<control type="group">
@@ -42,10 +45,14 @@
 					<height>500</height>
 					<onleft>8000</onleft>
 					<onright>8000</onright>
-					<onup>9001</onup>
+					
+					<onup>9000</onup>
+					<onup>600</onup>
 					<ondown>20</ondown>
-					<!-- <ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
-					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown> -->
+					<!-- <onup condition="System.HasAddon(script.globalsearch)">9000</ondown>
+					<ondown condition="!System.HasAddon(script.globalsearch)">600</onup> -->
+					<!-- <onup condition="System.HasAddon(script.globalsearch)">608</ondown>
+					<ondown condition="!System.HasAddon(script.globalsearch)">603</onup> -->
 					<viewtype label="Poster View1">icon</viewtype>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>60</scrolltime>
@@ -74,6 +81,17 @@
 							<bordersize>5</bordersize>
 							<!-- <visible>Control.HasFocus(8000)</visible> -->
 						</control>
+						<!-- <control type="image">
+							<posx>0</posx>
+							<posy></posy>
+							<width>170</width>
+							<height>265</height>
+							<texture fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+							<bordertexture>solidfills/s-blue4.png</bordertexture>
+							<bordersize>5</bordersize>
+							<visible>!Control.HasFocus(600)</visible>
+						</control> -->
 						<control type="label">
 							<posx>180</posx>
 							<posy>20</posy>

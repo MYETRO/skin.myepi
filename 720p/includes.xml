@@ -6,9 +6,13 @@
 	<include file="ViewsMusicLibrary.xml" />
 	<include file="ViewsFileMode.xml" />
 	<include file="ViewsPictures.xml" />
-	<!-- <include file="ViewsAddonBrowser.xml" /> -->
-	<include file="View_550_MYE_AddonInfo.xml" />
-	<include file="View_551_MYE_AddonThumb.xml" />
+	<include file="View_564_MYE_Original.xml" />
+	<include file="View_565_MYE_PosterFan.xml" />
+
+
+	<include file="ViewsAddonBrowser.xml" />
+	<!-- <include file="View_550_MYE_AddonInfo.xml" />
+	<include file="View_551_MYE_AddonThumb.xml" /> -->
 	<include file="ViewsLiveTV.xml" />
 	<include file="ViewsPVR.xml" />
 	<include file="IncludesCodecFlagging.xml" />
@@ -422,6 +426,7 @@ Mouse buttons -  like back , and HOME
 		<control type="group">
 			<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 			<visible>!Control.IsVisible(503)</visible>
+			<visible>!Control.IsVisible(564)</visible>
 			<control type="label">
 				<description>Page Count Label</description>
 				<posx>1050</posx>

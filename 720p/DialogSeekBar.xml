@@ -10,12 +10,13 @@
 			<posy>-6</posy>
 			<include>VisibleFadeEffect</include>
 			<control type="image">
+				<description>SEEK BAR HOLDER</description>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>150</width>
 				<height>70</height>
-				<colordiffuse>EEFFFFFF</colordiffuse>
-				<texture border="12">OverlayDialogBackground.png</texture>
+				<!-- <colordiffuse>EEFFFFFF</colordiffuse> -->
+				<texture>solidfills/s-blue4.png</texture>
 			</control>
 			<control type="label" id="1">
 				<description>Chapter Pos No</description>
@@ -45,15 +46,14 @@
 			</control>
 		</control>
 		<control type="group">
-			<posx>520r</posx>
+			<posx>20</posx>
 			<posy>-6</posy>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>370</width>
 				<height>70</height>
-				<colordiffuse>EEFFFFFF</colordiffuse>
-				<texture border="12">OverlayDialogBackground.png</texture>
+				<texture>solidfills/s-green.png</texture>
 			</control>
 			<control type="group">
 				<posx>260</posx>
@@ -236,12 +236,12 @@
 			<control type="label">
 				<description>Final Seek amount Label</description>
 				<posx>20</posx>
-				<posy>7</posy>
+				<posy>107</posy>
 				<width>240</width>
 				<height>20</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font10_title</font>
+				<font>font_View503NF</font>
 				<textcolor>blue</textcolor>
 				<label>[B]$LOCALIZE[773][/B][COLOR=grey] $INFO[Player.SeekOffset][/COLOR]</label>
 				<visible>Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]</visible>
@@ -303,9 +303,9 @@
 				<posx>20</posx>
 				<posy>45</posy>
 				<width>240</width>
-				<height>15</height>
+				<height>5</height>
 				<info>Player.ProgressCache</info>
-				<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+				<midtexture>solidfills/s-grey4.png</midtexture>
 				<visible>true</visible>
 			</control>
 			<control type="progress" id="23">
@@ -323,7 +323,7 @@
 				<posy>42</posy>
 				<width>240</width>
 				<height>12</height>
-				<texturesliderbar>seekslider.png</texturesliderbar>
+				<texturesliderbar>solidfills/s-blue4.png</texturesliderbar>
 				<textureslidernib>osd_slider_nib.png</textureslidernib>
 				<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
 				<visible>Player.Seeking</visible>

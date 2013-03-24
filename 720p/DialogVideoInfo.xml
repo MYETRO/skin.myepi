@@ -765,8 +765,8 @@
 					<visible>Control.IsVisible(50)</visible>
 				</control>
 
-			<control type="scrollbar" id="61">
-					<animation effect="zoom" end="570,155,10,410" time="100">focus</animation>
+			<control type="scrollbar" id="62">
+				<animation effect="zoom" end="570,155,10,410" time="100">focus</animation>
 				<posx>575</posx>
 				<posy>125</posy>
 				<width>5</width>
@@ -812,7 +812,7 @@ Description for MOVIES, TV SHOWS, SE, EP -->
 					<font>font_DescriptionM</font>
 					<align>left</align>
 					<textcolor>white</textcolor>
-					<pagecontrol>61</pagecontrol>
+					<pagecontrol>62</pagecontrol>
 					<label>$INFO[ListItem.Plot]</label>
 					<visible>!Control.IsVisible(50)</visible>
 					<onclick condition="SubString(Control.GetLabel(5),Plot)">right</onclick>
@@ -839,7 +839,7 @@ Description for MOVIES, TV SHOWS, SE, EP -->
 					<width>380</width>
 					<height>425</height>
 					<onleft>9000</onleft>
-					<onright>61</onright>
+					<onright>62</onright>
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<viewtype label="">list</viewtype>
@@ -899,7 +899,7 @@ Buttons	 -->
 					<align>left</align>
 					<orientation>vertical</orientation>
 					<onleft>49</onleft>
-					<onright>61</onright>
+					<onright>62</onright>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
 					<control type="togglebutton" id="8">

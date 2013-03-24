@@ -53,8 +53,9 @@
 				<posy>230r</posy>
 				<width>1280</width>
 				<height>230</height>
-				<texture>black-back-60%-720.png</texture>
+				<texture>solidfills/s-greydark.png</texture>
 			</control>
+
 
 			<control type="image" id="1">
 				<description>cover image</description>
@@ -64,22 +65,27 @@
 				<height>230</height>
 				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="8">ThumbShadow.png</bordertexture>
+				<bordertexture border="8">solidfills/s-grey10.png</bordertexture>
 				<bordersize>8</bordersize>
 				<visible>!VideoPlayer.Content(Movies)</visible>
 			</control>
 			<control type="image" id="1">
-				<description>Movie cover image</description>
-				<posx>20</posx>
-				<posy>350r</posy>
+				<description>*** Movie *** cover image</description>
+				<posx>0</posx>
+				<posy>370r</posy>
 				<width>300</width>
 				<height>330</height>
 				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="8">ThumbShadow.png</bordertexture>
-				<bordersize>8</bordersize>
+				<aspectratio aligny="center">keep</aspectratio>
+				<align>left</align>
+				<aligny>bottom</aligny>
+				<bordertexture border="4">solidfills/s-grey10.png</bordertexture>
+				<bordersize>4</bordersize>
 				<visible>VideoPlayer.Content(Movies)</visible>
 			</control>
+
+
+
 			<control type="group" id="1">
 				<posx>330</posx>
 				<posy>185r</posy>
@@ -92,12 +98,14 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
-					<label>$LOCALIZE[31040]</label>
+					<label>Now Playing</label>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>![VideoPlayer.Content(LiveTV) + Player.Recording]</visible>
 					<animation effect="slide" start="0,0" end="0,25" time="0" condition="!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)">conditional</animation>
 				</control>
+
+				<!-- Live TV -->
 				<control type="image" id="1">
 					<posy>0</posy>
 					<width>50</width>
@@ -120,17 +128,16 @@
 					<shadowcolor>black</shadowcolor>
 					<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
 				</control>
-				<control type="label" id="1">
+
+
+				<control type="image" id="1">
 					<description>Studio label</description>
-					<posx>20</posx>
-					<posy>30</posy>
-					<width>910</width>
-					<height>25</height>
+					<posx>60</posx>
+					<posy>0</posy>
+					<width>50</width>
+					<height>50</height>
 					<align>left</align>
-					<font>font12</font>
-					<label>$INFO[VideoPlayer.Studio]</label>
-					<textcolor>grey2</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<texture>$INFO[VideoPlayer.Studio,flagging/studios/,.png]</texture>
 					<visible>VideoPlayer.Content(Movies)</visible>
 				</control>
 				<control type="label" id="1">
@@ -216,14 +223,14 @@
 					<posy>120</posy>
 					<width>910</width>
 					<height>25</height>
-					<label>$LOCALIZE[31049] $INFO[Player.FinishTime]</label>
+					<label>Ends at: $INFO[Player.FinishTime]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12</font>
 					<textcolor>grey</textcolor>
 					<scroll>true</scroll>
-					<visible>!Window.IsVisible(VideoOSD) + !VideoPlayer.Content(LiveTV)</visible>
-					<animation effect="fade" time="200">VisibleChange</animation>
+					<visible>Window.IsVisible(VideoOSD) + !VideoPlayer.Content(LiveTV)</visible>
+					<!-- <animation effect="fade" time="200">VisibleChange</animation> -->
 				</control>
 				<control type="label" id="1">
 					<posx>0</posx>
@@ -240,6 +247,9 @@
 					<animation effect="fade" time="200">VisibleChange</animation>
 				</control>
 			</control>
+
+
+
 			<control type="group" id="1">
 				<posx>330</posx>
 				<posy>95r</posy>
@@ -307,6 +317,8 @@
 				</control>
 			</control>
 		</control>
+
+
 		<!-- codec info -->
 		<control type="group" id="0">
 			<posx>0</posx>
@@ -354,6 +366,7 @@
 				<label>-</label>
 			</control>
 		</control>
+
 		<control type="selectbutton" id="503">
 			<posx>440</posx>
 			<posy>100</posy>
@@ -368,6 +381,8 @@
 			<ondown>500</ondown>
 			<include>VisibleFadeEffect</include>
 		</control>
+
+		
 		<control type="group">
 			<visible>Player.ShowCodec + VideoPlayer.Content(LiveTV) + system.getbool(pvrplayback.signalquality)</visible>
 			<posy>165</posy>
