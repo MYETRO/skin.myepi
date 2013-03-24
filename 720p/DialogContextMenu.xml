@@ -13,7 +13,23 @@
 			<posy>0</posy>
 			<width>340</width>
 			<height>720</height>
-			<texture border="20">DialogBack.png</texture>
+			<texture>DialogBack.png</texture>
+		</control>
+		<control type="image" id="999">
+			<description>background image</description>
+			<posx>30</posx>
+			<posy>38</posy>
+			<width>25</width>
+			<height>25</height>
+			<texture flipx="true">icons/arrow1.png</texture>
+		</control>
+		<control type="image" id="999">
+			<description>background image</description>
+			<posx>30</posx>
+			<posy>200</posy>
+			<width>25</width>
+			<height>25</height>
+			<texture>icons/arrow1.png</texture>
 		</control>
 		<control type="grouplist" id="996">
 			<description>grouplist for context buttons</description>
@@ -21,7 +37,12 @@
 			<posy>30</posy>
 			<width>300</width>
 			<height max="670">auto</height>
+			<textoffsetx>20</textoffsetx>
 			<itemgap>2</itemgap>
+			<onleft>1001</onleft>
+			<!-- <onleft>1005</onleft> -->
+			<!-- <onright>1005</onright> -->
+			<onright>1005</onright>
 		</control>
 		<control type="button">
 			<description>Close Window button</description>
@@ -42,7 +63,7 @@
 		</control>
 		<control type="button" id="1000">
 			<description>button template</description>
-			<posx>-</posx>
+			<posx>145</posx>
 			<posy>-</posy>
 			<width>300</width>
 			<height>38</height>
@@ -50,7 +71,7 @@
 			<align>center</align>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5">button-focus.png</texturefocus>
+			<texturefocus>solidfills/s-blue1.png</texturefocus>
 		</control>
 	</controls>
 </window>
