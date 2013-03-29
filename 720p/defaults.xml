@@ -57,15 +57,17 @@
 		<textcolor>white</textcolor>
 		<font>font13</font>
 	</default>
+
 	<default type="progress">
 		<posx>100</posx>
 		<posy>325</posy>
-		<texturebg border="6,0,6,0">OSDProgressBack.png</texturebg>
+		<texturebg>solidfills/s-grey2.png</texturebg>
 		<lefttexture>-</lefttexture>
-		<midtexture border="6,0,6,0">OSDProgressMid.png</midtexture>
+		<midtexture>solidfills/s-blue3.png</midtexture>
 		<righttexture>-</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</default>
+
 	<default type="spincontrol">
 		<posx>330</posx>
 		<posy>126</posy>

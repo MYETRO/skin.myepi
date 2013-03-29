@@ -92,7 +92,28 @@ SMALL LEGENDS:
 
 ************************
 TYPE:	SemiLight
-SIZE:	20, 25, 30, 35, 40
+SIZE:	10, 15, 17, 20, 25, 30, 35, 40
+<font>
+	<name>semilight10</name>
+	<filename>SegoeWP-Semilight.ttf</filename>
+	<size>10</size>
+	<linespacing>0.8</linespacing>
+	<!-- <style>bold</style> -->
+</font>
+<font>
+	<name>semilight15</name>
+	<filename>SegoeWP-Semilight.ttf</filename>
+	<size>15</size>
+	<linespacing>0.8</linespacing>
+	<!-- <style>bold</style> -->
+</font>
+<font>
+	<name>semilight17</name>
+	<filename>SegoeWP-Semilight.ttf</filename>
+	<size>17</size>
+	<linespacing>0.8</linespacing>
+	<!-- <style>bold</style> -->
+</font>
 <font>
 	<name>semilight20</name>
 	<filename>SegoeWP-Semilight.ttf</filename>
@@ -125,6 +146,38 @@ SIZE:	20, 25, 30, 35, 40
 	<name>semilight40</name>
 	<filename>SegoeWP-Semilight.ttf</filename>
 	<size>40</size>
+	<linespacing>0.8</linespacing>
+	<!-- <style>bold</style> -->
+</font>
+
+************************
+TYPE:	SemiBold
+SIZE:	10, 15, 17, 20, 25, 30, 35, 40
+<font>
+	<name>semibold10</name>
+	<filename>SegoeWP-Semibold.ttf</filename>
+	<size>10</size>
+	<linespacing>0.8</linespacing>
+	<!-- <style>bold</style> -->
+</font>
+<font>
+	<name>semibold15</name>
+	<filename>SegoeWP-Semibold.ttf</filename>
+	<size>15</size>
+	<linespacing>0.8</linespacing>
+	<!-- <style>bold</style> -->
+</font>
+<font>
+	<name>semibold17</name>
+	<filename>SegoeWP-Semibold.ttf</filename>
+	<size>17</size>
+	<linespacing>0.8</linespacing>
+	<!-- <style>bold</style> -->
+</font>
+<font>
+	<name>semibold20</name>
+	<filename>SegoeWP-Semibold.ttf</filename>
+	<size>20</size>
 	<linespacing>0.8</linespacing>
 	<!-- <style>bold</style> -->
 </font>

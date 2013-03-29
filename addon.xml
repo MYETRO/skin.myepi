@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.myepi"
-  version="0.2.0324"
+  version="0.2.0329"
   name="MYEPi"
   provider-name="MYETRO">
   <requires>
