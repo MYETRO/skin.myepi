@@ -29,7 +29,7 @@
 					<height>720</height>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture>backs/view564back20.png</texture>
+					<texture>backs/view564back50.png</texture>
 				</control>
 			<control type="image">
 				<description>POSTER BORDER</description>
@@ -201,7 +201,7 @@
 						<posx>0</posx>
 						<posy>15</posy>
 						<width>70</width>
-						<height>60</height>
+						<height>50</height>
 						<font>semilight25</font>
 						<textcolor>white</textcolor>
 						<align>center</align>
@@ -213,7 +213,7 @@
 
 					<control type="label">
 						<posx>606</posx>
-						<posy>415</posy>
+						<posy>410</posy>
 						<width>500</width>
 						<height>70</height>
 						<wrapmultiline>true</wrapmultiline>
@@ -457,7 +457,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(-6).thumb</info>
 					</control>
@@ -474,7 +474,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(-5).thumb</info>
 					</control>
@@ -491,7 +491,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio> 
 						<info>Container(564).ListItem(-4).thumb</info>
 					</control>
@@ -510,7 +510,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>  
 						<info>Container(564).ListItem(-3).thumb</info>
 					</control>
@@ -528,7 +528,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio> 
 						<info>Container(564).ListItem(-2).thumb</info>
 					</control>
@@ -546,7 +546,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(-1).thumb</info>
 					</control>
@@ -566,7 +566,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>80</width>
-						<height>120</height>
+						<height>120</height>						
 						<info>Container(564).ListItem(0).thumb</info>
 					</control>
 				</control>
@@ -586,6 +586,7 @@
 						<width>320</width>
 						<height>473.5</height>
 						<aspectratio>scale</aspectratio>
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<info>Container(564).ListItem(1).thumb</info>
 					</control>
 				</control>
@@ -603,7 +604,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true" diffuse="simplicity/posterdiffuse.png"/> 
+						<texture diffuse="tints/white-50.png" background="true"/>  
 						<info>Container(564).ListItem(1).thumb</info>
 					</control>
 				</control>
@@ -624,7 +625,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/>  
+						<texture diffuse="tints/white-50.png" background="true"/>  
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(2).thumb</info>
 					</control>
@@ -643,7 +644,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/>  
+						<texture diffuse="tints/white-50.png" background="true"/>  
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(3).thumb</info>
 					</control>
@@ -662,7 +663,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(4).thumb</info>
 					</control>
@@ -682,7 +683,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(5).thumb</info>
 					</control>
@@ -700,7 +701,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(6).thumb</info>
 					</control>
@@ -717,7 +718,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(7).thumb</info>
 					</control>
@@ -734,7 +735,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(6).thumb</info>
 					</control>
@@ -769,7 +770,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(-7).thumb</info>
 					</control>
@@ -786,7 +787,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(-6).thumb</info>
 					</control>
@@ -805,7 +806,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(-5).thumb</info>
 					</control>
@@ -824,7 +825,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio> 
 						<info>Container(564).ListItem(-4).thumb</info>
 					</control>
@@ -843,7 +844,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>  
 						<info>Container(564).ListItem(-3).thumb</info>
 					</control>
@@ -862,7 +863,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio> 
 						<info>Container(564).ListItem(-2).thumb</info>
 					</control>
@@ -881,7 +882,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(-1).thumb</info>
 					</control>
@@ -903,6 +904,7 @@
 						<width>320</width>
 						<height>473.5</height>
 						<aspectratio>scale</aspectratio>
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<info>Container(564).ListItem(-1).thumb</info>
 					</control>
 				</control>
@@ -921,7 +923,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true" diffuse="simplicity/posterdiffuse.png"/> 
+						<!-- <texture diffuse="tints/white-50.png" background="true"/>  -->
 						<info>Container(564).ListItem(0).thumb</info>
 					</control>
 				</control>
@@ -961,7 +963,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(1).thumb</info>
 					</control>
@@ -980,7 +982,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/>  
+						<texture diffuse="tints/white-50.png" background="true"/>  
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(2).thumb</info>
 					</control>
@@ -998,7 +1000,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/>  
+						<texture diffuse="tints/white-50.png" background="true"/>  
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(3).thumb</info>
 					</control>
@@ -1016,7 +1018,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(4).thumb</info>
 					</control>
@@ -1034,7 +1036,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(5).thumb</info>
 					</control>
@@ -1056,7 +1058,7 @@
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(6).thumb</info>
 					</control>
@@ -1094,11 +1096,11 @@ STATIC
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(-6).thumb</info>
 					</control>
-					<control type="label">
+					<!-- <control type="label">
 						<posx>90</posx>
 						<posy>90</posy>
 						<width>1000</width>
@@ -1108,7 +1110,7 @@ STATIC
 						<scroll>false</scroll>
 						<align>left</align>
 						<info>Container(564).ListItem(-6).title</info>
-					</control>
+					</control> -->
 					<control type="image">
 						<posx>0</posx>
 						<posy>190</posy>
@@ -1133,11 +1135,11 @@ STATIC
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(-5).thumb</info>
 					</control>
-					<control type="label">
+					<!-- <control type="label">
 						<posx>90</posx>
 						<posy>90</posy>
 						<width>1000</width>
@@ -1147,7 +1149,7 @@ STATIC
 						<scroll>false</scroll>
 						<align>left</align>
 						<info>Container(564).ListItem(-5).title</info>
-					</control>
+					</control> -->
 				</control>
 
 				<!-- Icon 1 -->
@@ -1162,11 +1164,11 @@ STATIC
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio> 
 						<info>Container(564).ListItem(-4).thumb</info>
 					</control>
-					<control type="label">
+					<!-- <control type="label">
 						<posx>90</posx>
 						<posy>90</posy>
 						<width>1000</width>
@@ -1176,7 +1178,7 @@ STATIC
 						<scroll>false</scroll>
 						<align>left</align>
 						<info>Container(564).ListItem(-4).title</info>
-					</control>
+					</control> -->
 				</control>
 
 				<!-- Icon 2 -->
@@ -1191,11 +1193,11 @@ STATIC
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>  
 						<info>Container(564).ListItem(-3).thumb</info>
 					</control>
-					<control type="label">
+					<!-- <control type="label">
 						<posx>90</posx>
 						<posy>90</posy>
 						<width>1000</width>
@@ -1205,7 +1207,7 @@ STATIC
 						<scroll>false</scroll>
 						<align>left</align>
 						<info>Container(564).ListItem(-3).title</info>
-					</control>
+					</control> -->
 				</control>
 
 
@@ -1221,11 +1223,11 @@ STATIC
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio> 
 						<info>Container(564).ListItem(-2).thumb</info>
 					</control>
-					<control type="label">
+					<!-- <control type="label">
 						<posx>90</posx>
 						<posy>90</posy>
 						<width>1000</width>
@@ -1235,7 +1237,7 @@ STATIC
 						<scroll>false</scroll>
 						<align>left</align>
 						<info>Container(564).ListItem(-2).title</info>
-					</control>
+					</control> -->
 				</control>
 
 				<!-- Icon 4 -->
@@ -1250,11 +1252,11 @@ STATIC
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(-1).thumb</info>
 					</control>
-					<control type="label">
+					<!-- <control type="label">
 						<posx>90</posx>
 						<posy>90</posy>
 						<width>1000</width>
@@ -1264,7 +1266,7 @@ STATIC
 						<scroll>false</scroll>
 						<align>left</align>
 						<info>Container(564).ListItem(-1).title</info>
-					</control>
+					</control> -->
 				</control>
 
 
@@ -1332,11 +1334,11 @@ STATIC
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(1).thumb</info>
 					</control>
-					<control type="label">
+					<!-- <control type="label">
 						<posx>90</posx>
 						<posy>0</posy>
 						<width>1000</width>
@@ -1346,7 +1348,7 @@ STATIC
 						<scroll>false</scroll>
 						<align>left</align>
 						<info>Container(564).ListItem(1).title</info>
-					</control>
+					</control> -->
 				</control>
 
 				<!-- Icon 7 -->
@@ -1361,11 +1363,11 @@ STATIC
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/>  
+						<texture diffuse="tints/white-50.png" background="true"/>  
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(2).thumb</info>
 					</control>
-					<control type="label">
+					<!-- <control type="label">
 						<posx>90</posx>
 						<posy>0</posy>
 						<width>1000</width>
@@ -1375,7 +1377,7 @@ STATIC
 						<scroll>false</scroll>
 						<align>left</align>
 						<info>Container(564).ListItem(2).title</info>
-					</control>
+					</control> -->
 				</control>
 
 				<!-- Icon 8 -->
@@ -1390,11 +1392,11 @@ STATIC
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/>  
+						<texture diffuse="tints/white-50.png" background="true"/>  
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(3).thumb</info>
 					</control>
-					<control type="label">
+					<!-- <control type="label">
 						<posx>90</posx>
 						<posy>0</posy>
 						<width>1000</width>
@@ -1404,7 +1406,7 @@ STATIC
 						<scroll>false</scroll>
 						<align>left</align>
 						<info>Container(564).ListItem(3).title</info>
-					</control>
+					</control> -->
 				</control>
 
 				<!-- Icon 9 -->
@@ -1419,11 +1421,11 @@ STATIC
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(4).thumb</info>
 					</control>
-					<control type="label">
+					<!-- <control type="label">
 						<posx>90</posx>
 						<posy>0</posy>
 						<width>1000</width>
@@ -1433,7 +1435,7 @@ STATIC
 						<scroll>false</scroll>
 						<align>left</align>
 						<info>Container(564).ListItem(4).title</info>
-					</control>
+					</control> -->
 				</control>
 
 				<!-- Icon 10 -->
@@ -1448,11 +1450,11 @@ STATIC
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(5).thumb</info>
 					</control>
-					<control type="label">
+					<!-- <control type="label">
 						<posx>90</posx>
 						<posy>0</posy>
 						<width>1000</width>
@@ -1462,7 +1464,7 @@ STATIC
 						<scroll>false</scroll>
 						<align>left</align>
 						<info>Container(564).ListItem(5).title</info>
-					</control>
+					</control> -->
 				</control>
 
 				<!-- Icon 11 -->
@@ -1477,11 +1479,11 @@ STATIC
 						<posy>0</posy>
 						<width>80</width>
 						<height>120</height>
-						<texture background="true"/> 
+						<texture diffuse="tints/white-50.png" background="true"/> 
 						<aspectratio>scale</aspectratio>
 						<info>Container(564).ListItem(6).thumb</info>
 					</control>
-					<control type="label">
+					<!-- <control type="label">
 						<posx>90</posx>
 						<posy>0</posy>
 						<width>1000</width>
@@ -1491,7 +1493,7 @@ STATIC
 						<scroll>false</scroll>
 						<align>left</align>
 						<info>Container(564).ListItem(6).title</info>
-					</control>
+					</control> -->
 				</control>
 
 
