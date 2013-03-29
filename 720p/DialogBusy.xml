@@ -34,7 +34,7 @@
 				<posy>0</posy>
 				<width>300</width>
 				<height>100</height>
-				<texture>tints/WorkingAni.png</texture>
+				<texture>tints/WorkingAni2.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="40" time="1800" pulse="true" condition="true">conditional</animation>
 				<!-- <animation effect="rotate" start="0" end="360" center="36,36" time="1200" loop="true" condition="true">conditional</animation> -->
@@ -53,9 +53,9 @@
 			</control>
 			<control type="progress" id="10">
 				<description>Progressbar</description>
-				<posx>20</posx>
-				<posy>53</posy>
-				<width>160</width>
+				<posx>0</posx>
+				<posy>18r</posy>
+				<width>300</width>
 				<height>8</height>
 			</control>
 		</control>
