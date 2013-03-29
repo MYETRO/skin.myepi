@@ -130,6 +130,20 @@
 							<aligny>top</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
+						<control type="label">
+							<posx>350</posx>
+							<posy>20</posy>
+							<width>400</width>
+							<height>20</height>
+							<font>semibold30</font>
+							<textcolor>blue</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<scroll>false</scroll>
+							<align>left</align>
+							<aligny>top</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(8000)</visible>
+						</control>
 					</focusedlayout>
 
 

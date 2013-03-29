@@ -7,8 +7,8 @@
 			<posx>400r</posx>
 			<posy>50r</posy>
 			<animation effect="slide" end="-400,0" time="200" condition="Window.IsVisible(133)">conditional</animation>
-			<animation effect="slide" end="380,0" time="200" condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation) ">conditional</animation>
-			| Window.IsVisible(VideoLibrary)
+			<!-- <animation effect="slide" end="380,0" time="200" condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation) ">conditional</animation>
+			| Window.IsVisible(VideoLibrary) -->
 			<!-- <control type="image">
 				<posx>0</posx>
 				<posy>-10</posy>
