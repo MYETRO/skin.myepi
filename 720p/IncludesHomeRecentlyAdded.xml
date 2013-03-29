@@ -21,8 +21,8 @@
 				<visible>Container(9000).Hasfocus(10) + !Skin.HasSetting(HomepageHideRecentlyAddedVideo)</visible>
 				<include>VisibleFadeEffect</include>
 				
-				<control type="label"> <!-- Recent added title -->
-					<description>Title label</description>
+				<!-- <control type="label">
+					<description>Recent added title</description>
 					<posx>530</posx>
 					<posy>50r</posy>
 					<height>20</height>
@@ -33,81 +33,106 @@
 					<font>font_View503NF</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
+				</control> -->
+				<control type="label">
+					<posx>530</posx>
+					<posy>50r</posy>
+					<height>20</height>
+					<width>340</width>
+					<font>semibold20</font>
+					<textcolor>white</textcolor>
+					<wrapmultiline>true</wrapmultiline>
+					<scroll>false</scroll>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
 				</control>
 
-
-
-						
+				<!-- <control type="image">
+					<posx>410</posx>
+					<posy>460r</posy>
+					<width>850</width>
+					<height>450</height>
+					<texture>tints/white-20.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>	 -->
+				<control type="image">
+					<posx>610</posx>
+					<posy>265r</posy>
+					<width>670</width>
+					<height>50</height>
+					<texture>solidfills/s-greydark.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>	
 				<control type="fixedlist" id="8000">
-					<posx>0</posx>
-					<posy>430</posy>
-					<width>1260</width>
-					<height>500</height>
-					<onleft>8000</onleft>
+					<posx>320</posx>
+					<posy>482r</posy>
+					<width>850</width>
+					<height>430</height>
+					<onleft>9000</onleft>
 					<onright>8000</onright>
-					
-					<onup>9000</onup>
+					<onup>8000</onup>
 					<onup>600</onup>
-					<ondown>20</ondown>
-					<!-- <onup condition="System.HasAddon(script.globalsearch)">9000</ondown>
-					<ondown condition="!System.HasAddon(script.globalsearch)">600</onup> -->
-					<!-- <onup condition="System.HasAddon(script.globalsearch)">608</ondown>
-					<ondown condition="!System.HasAddon(script.globalsearch)">603</onup> -->
-					<viewtype label="Poster View1">icon</viewtype>
+					<ondown>8000</ondown>
+					<viewtype>icon</viewtype>
 					<pagecontrol>-</pagecontrol>
+					<movement>0</movement>
 					<scrolltime>60</scrolltime>
-					<orientation>Horizontal</orientation>					
-					<focusposition>3</focusposition>
-					<itemlayout height="150" width="105">						
-						<control type="image">
-							<posx>20</posx>
-							<posy>80</posy>
+					<!-- <orientation>Horizontal</orientation>					 -->
+					<focusposition>5</focusposition>
+					<itemlayout height="40" width="515">					<!-- <control type="image">
+							<posx>50</posx>
+							<posy>40</posy>
 							<width>100</width>
 							<height>150</height>
-							<texture fallback="DefaultVideo.png" diffuse="tints/white-40.png" >$INFO[ListItem.Icon]</texture>
+							<texture fallback="DefaultVideo.png" diffuse="tints/white-80.png" >$INFO[ListItem.Icon]</texture>
 							<aspectratio>scale</aspectratio>
+						</control> -->
+						<control type="label">
+							<posx>350</posx>
+							<posy>20</posy>
+							<width>400</width>
+							<height>20</height>
+							<font>semilight30</font>
+							<textcolor>white</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<scroll>false</scroll>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>top</aligny>
+							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
 
-					<focusedlayout height="155" width="130">
+					<focusedlayout height="40" width="530">
 						<control type="image">
-							<posx>0</posx>
-							<posy></posy>
-							<width>170</width>
-							<height>265</height>
+							<posx>20</posx>
+							<posy>-180</posy>
+							<width>275</width>
+							<height>400</height>
 							<texture fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio>scale</aspectratio>
-							<bordertexture>solidfills/s-blue4.png</bordertexture>
+							<bordertexture>solidfills/s-greydark.png</bordertexture>
 							<bordersize>5</bordersize>
-							<!-- <visible>Control.HasFocus(8000)</visible> -->
 						</control>
-						<!-- <control type="image">
-							<posx>0</posx>
-							<posy></posy>
-							<width>170</width>
-							<height>265</height>
-							<texture fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
-							<aspectratio>scale</aspectratio>
-							<bordertexture>solidfills/s-blue4.png</bordertexture>
-							<bordersize>5</bordersize>
-							<visible>!Control.HasFocus(600)</visible>
-						</control> -->
+						
 						<control type="label">
-							<posx>180</posx>
+							<posx>350</posx>
 							<posy>20</posy>
-							<width>700</width>
+							<width>400</width>
 							<height>20</height>
-							<font>home-sub</font>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<font>semibold30</font>
+							<textcolor>grey2</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<scroll>false</scroll>
 							<align>left</align>
-							<aligny>center</aligny>
+							<aligny>top</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</focusedlayout>
 
 
-					
 
 					<content>
 			

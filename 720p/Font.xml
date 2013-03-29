@@ -181,6 +181,20 @@ SIZE:	10, 15, 17, 20, 25, 30, 35, 40
 	<linespacing>0.8</linespacing>
 	<!-- <style>bold</style> -->
 </font>
+<font>
+	<name>semibold25</name>
+	<filename>SegoeWP-Semibold.ttf</filename>
+	<size>25</size>
+	<linespacing>0.8</linespacing>
+	<!-- <style>bold</style> -->
+</font>
+<font>
+	<name>semibold30</name>
+	<filename>SegoeWP-Semibold.ttf</filename>
+	<size>30</size>
+	<linespacing>0.8</linespacing>
+	<!-- <style>bold</style> -->
+</font>
 
 
 *************************************************************************************
