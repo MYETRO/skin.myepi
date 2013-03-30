@@ -55,9 +55,9 @@
 			</control>
 			<control type="progress" id="10">
 				<description>Progressbar</description>
-				<posx>0</posx>
+				<posx>20</posx>
 				<posy>18r</posy>
-				<width>300</width>
+				<width>280</width>
 				<height>8</height>
 			</control>
 		</control>
