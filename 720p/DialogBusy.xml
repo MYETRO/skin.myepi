@@ -7,17 +7,18 @@
 		<posy>0</posy>
 	</coordinates>
 	<controls>
-		<control type="group">
-			<posx>270r</posx>
-			<posy>610</posy>
-			<control type="image">
+		<control type="image">
 				<description>background image</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>270</width>
-				<height>100</height>
-				<texture>solidfills/s-black1.png</texture>
+				<width>1280</width>
+				<height>720</height>
+				<texture>tints/black-30.png</texture>
 			</control>
+		<control type="group">
+			<posx>290r</posx>
+			<posy>590</posy>
+			
 			<!-- <control type="image">
 				<description>Busy animation</description>
 				<posx>20</posx>
@@ -32,23 +33,24 @@
 				<description>Busy animation</description>
 				<posx>-15</posx>
 				<posy>0</posy>
-				<width>300</width>
-				<height>100</height>
+				<width>350</width>
+				<height>150</height>
 				<texture>tints/WorkingAni2.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="40" time="1800" pulse="true" condition="true">conditional</animation>
+				<animation effect="fade" start="50" time="1800" pulse="true" condition="true">conditional</animation>
 				<!-- <animation effect="rotate" start="0" end="360" center="36,36" time="1200" loop="true" condition="true">conditional</animation> -->
 			</control>
 			<control type="label">
 				<description>Busy label</description>
-				<posx>0</posx>
-				<posy>0</posy>
+				<posx>15</posx>
+				<posy>20</posy>
 				<width>290</width>
 				<height>100</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<label>$LOCALIZE[31004]</label>
-				<font>semilight30</font>
+				<!-- <label>$LOCALIZE[31004]</label> -->
+				<label>Working...</label>
+				<font>semibold25</font>
 				<textcolor>white</textcolor>
 			</control>
 			<control type="progress" id="10">
