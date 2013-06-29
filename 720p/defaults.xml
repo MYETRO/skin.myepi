@@ -61,7 +61,7 @@
 	<default type="progress">
 		<posx>100</posx>
 		<posy>325</posy>
-		<texturebg>solidfills/s-grey2.png</texturebg>
+		<texturebg>solidfills/s-greydark1.png</texturebg>
 		<lefttexture>-</lefttexture>
 		<midtexture>solidfills/s-blue3.png</midtexture>
 		<righttexture>-</righttexture>

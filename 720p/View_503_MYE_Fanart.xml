@@ -34,9 +34,9 @@ Media Info 2 - Correct
 
 				<control type="image"> 	
 					<description>FANART BIG PANEL</description>	
-					<posx>390</posx>
+					<posx>0</posx>
 					<posy>0</posy>
-					<width>890</width>
+					<width>1280</width>
 					<height>720</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
@@ -67,7 +67,7 @@ Media Info 2 - Correct
 					<height>720</height>
 					<align>left</align>
 					<aligny>bottom</aligny>
-					<texture>solidfills/s-grey10.png</texture>
+					<texture>gradients/leftgrad2.png</texture>
 				</control>
 				<control type="image">
 					<description>FANART SHADOW - PANEL</description>
@@ -92,17 +92,45 @@ Media Info 2 - Correct
 				</control>
 
 				<control type="label">
-						<description> ** Focused ** List of contents - used this so i could use multilines</description>
-						<posx>375</posx>
-						<posy>235</posy>
-						<width>350</width>
-						<height>130</height>
-						<font>font_View503</font>
-						<label>$INFO[ListItem.Label]</label>
-						<align>right</align>
-						<wrapmultiline>true</wrapmultiline>
-						<aligny>center</aligny>
-						<textcolor>greydark</textcolor>
+					<description> ** Focused ** List of contents - used this so i could use multilines</description>
+					<posx>375</posx>
+					<posy>235</posy>
+					<width>350</width>
+					<height>130</height>
+					<font>semibold35</font>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<align>right</align>
+					<wrapmultiline>true</wrapmultiline>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="image"> 	
+					<description>INFO PANEL</description>	
+					<posx>605</posx>
+					<posy>265r</posy>
+					<width>640</width>
+					<height>250</height>
+					<texture>tints/black-70.png</texture>
+					<include>backgroundfade</include>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<visible>![Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)]</visible>
+					<visible>!Skin.HasSetting(View503HideInfo)</visible>
+				</control>
+				<control type="textbox" id="400">
+					<description>*** PLOT *** Value for Movies</description>
+					<posx>615</posx>
+					<posy>260r</posy>
+					<width>610</width>
+					<height>245</height>
+					<font>semibold20</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textcolor>white</textcolor>
+					<pagecontrol>61</pagecontrol>
+					<autoscroll time="3000" delay="10000" repeat="12000">true</autoscroll>
+					<label>[UPPERCASE]$INFO[ListItem.Plot][/UPPERCASE]</label>
+					<visible>!Skin.HasSetting(View503HideInfo)</visible>
+					<include>backgroundfade</include>
 				</control>
 
 			<control type="fixedlist" id="503">
@@ -117,7 +145,7 @@ Media Info 2 - Correct
 				<ondown>503</ondown>
 				<viewtype label="MYE Fanart">list</viewtype>
 				<pagecontrol>60</pagecontrol>
-				<scrolltime>80</scrolltime>
+				<scrolltime>40</scrolltime>
 				<focusposition>6</focusposition>
 				<movement>0</movement>
 				<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)</visible>
@@ -129,17 +157,17 @@ Media Info 2 - Correct
 						<posy>-12</posy>
 						<width>350</width>
 						<height>40</height>
-						<font>font_View503NF</font>
-						<textcolor>grey3</textcolor>
+						<font>semilight25</font>
+						<textcolor>greydark</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 					</control>
 					<control type="image">
-						<posx>385</posx>
+						<posx>380</posx>
 						<posy>-4</posy>
-						<width>5</width>
+						<width>10</width>
 						<height>26</height>
 						<align>right</align>
 						<aspectratio>stretch</aspectratio>
@@ -147,9 +175,9 @@ Media Info 2 - Correct
 						<visible>!ListItem.IsResumable</visible>
 					</control>
 					<control type="image">
-						<posx>385</posx>
+						<posx>380</posx>
 						<posy>-5</posy>
-						<width>5</width>
+						<width>10</width>
 						<height>26</height>
 						<align>right</align>
 						<texture>icons/OverlayWatching.png</texture>
@@ -263,6 +291,7 @@ Media Info 2 - Correct
 
 			
 			<control type="group">
+					<visible>Skin.HasSetting(View503HideInfo)</visible>
 					<posx>-50</posx>
 					<posy>520</posy>
 				<control type="label">

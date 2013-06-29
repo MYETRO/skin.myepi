@@ -3,6 +3,14 @@
 	<allowoverlay>no</allowoverlay>
 	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
 	<views>50,51,500,550,551,509,506,511,512,513</views>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="slide" start="-500" end="0"easing="out" time="200" />
+		<effect type="fade" start="0" end="100" time="200" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="slide" start="0" end="-500" easing="out"  time="200" />
+		<effect type="fade" start="100" end="0" time="200" />
+	</animation>
 	<controls>
 		<include>CommonBackground</include>
 		<include>ContentPanelBackgrounds</include>

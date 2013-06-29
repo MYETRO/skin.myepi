@@ -6,8 +6,8 @@
 	<controls>
 		<control type="group">
 			<visible>player.chaptercount + Window.IsVisible(FullScreenVideo)</visible>
-			<posx>665r</posx>
-			<posy>-6</posy>
+			<posx>0</posx>
+			<posy>0</posy>
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<description>SEEK BAR HOLDER</description>
@@ -46,8 +46,8 @@
 			</control>
 		</control>
 		<control type="group">
-			<posx>20</posx>
-			<posy>-6</posy>
+			<posx>0</posx>
+			<posy>0</posy>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -298,31 +298,33 @@
 				<label>$INFO[Player.SeekTime] - $INFO[Player.Duration]</label>
 				<visible>Player.Seeking</visible>
 			</control>
+
+
 			<control type="progress">
 				<description>ProgressbarCache</description>
-				<posx>20</posx>
-				<posy>45</posy>
-				<width>240</width>
-				<height>5</height>
+				<posx>0</posx>
+				<posy>10r</posy>
+				<width>1280</width>
+				<height>10</height>
 				<info>Player.ProgressCache</info>
-				<midtexture>solidfills/s-grey4.png</midtexture>
+				<midtexture>solidfills/s-grey7.png</midtexture>
 				<visible>true</visible>
 			</control>
 			<control type="progress" id="23">
 				<description>Progressbar</description>
-				<posx>20</posx>
-				<posy>45</posy>
-				<width>240</width>
-				<height>15</height>
+				<posx>0</posx>
+				<posy>10r</posy>
+				<width>1280</width>
+				<height>10</height>
 				<info>Player.Progress</info>
 				<visible>true</visible>
 			</control>
 			<control type="slider" id="401">
 				<description>Seek Slider</description>
-				<posx>20</posx>
-				<posy>42</posy>
+				<posx>0</posx>
+				<posy>15r</posy>
 				<width>240</width>
-				<height>12</height>
+				<height>15</height>
 				<texturesliderbar>solidfills/s-blue4.png</texturesliderbar>
 				<textureslidernib>osd_slider_nib.png</textureslidernib>
 				<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>

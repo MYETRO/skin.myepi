@@ -1,5 +1,6 @@
 <includes>
 	<include file="defaults.xml" />
+
 	<include file="View_52_MYE_Info.xml" />
 	<include file="View_503_MYE_Fanart.xml" />
 	<include file="View_504_MYE_ListView2.xml" />
@@ -8,7 +9,9 @@
 	<include file="ViewsPictures.xml" />
 	<include file="View_564_MYE_Original.xml" />
 	<include file="View_565_MYE_PosterFan.xml" />
+	<include file="View_566_MYE_Slide.xml" />
 
+	<include file="Custom_Overlay.xml" />
 
 	<include file="ViewsAddonBrowser.xml" />
 	<!-- <include file="View_550_MYE_AddonInfo.xml" />
@@ -18,12 +21,18 @@
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
 	<include file="IncludesHomeMenuItems.xml" />
-	<include file="IncludesBackgroundBuilding.xml" />
+	<include file="IncludesFavourites.xml" />
+	<include file="IncludesHomeMenuItems.xml" />
 	<include file="weather\10DayForecast.xml" />
 	<include file="weather\36HourForecast.xml" />
 	<include file="weather\WeekendForecast.xml" />
 	<include file="weather\HourlyForecast.xml" />
 	<include file="weather\MapAlerts.xml" />
+
+
+	<include file="weather\MapAlerts.xml" />
+
+	<!-- <include file="IncludesPlayerControl.xml" />  refocus xmls -->
 
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
@@ -62,6 +71,7 @@
 		<scroll>false</scroll>
 		<align>left</align>
 		<aligny>left</aligny>
+		<visible>!Control.IsVisible(566)</visible>
 	</include>
 	
 	
@@ -276,6 +286,7 @@ Mouse buttons -  like back , and HOME
 
 
 
+	
 
 
 
@@ -427,6 +438,7 @@ Mouse buttons -  like back , and HOME
 			<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 			<visible>!Control.IsVisible(503)</visible>
 			<visible>!Control.IsVisible(564)</visible>
+			<visible>!Control.IsVisible(566)</visible>
 			<control type="label">
 				<description>Page Count Label</description>
 				<posx>1050</posx>
@@ -1173,14 +1185,14 @@ Mouse buttons -  like back , and HOME
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<visible>ControlGroup(9002).HasFocus</visible>
 			</control>
-			<control type="image">
+			<!-- <control type="image">
 				<posx>5</posx>
 				<posy>120</posy>
 				<width>170</width>
 				<height>110</height>
 				<aspectratio aligny="top">keep</aspectratio>
 				<texture diffuse="diffuse_mirror2.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
-			</control>
+			</control> -->
 			<control type="label">
 				<posx>91</posx>
 				<posy>125</posy>

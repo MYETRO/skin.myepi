@@ -1297,7 +1297,7 @@ stuff like that
 
 
 
-
+				
 
 
 
@@ -1457,14 +1457,14 @@ stuff like that
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 					</item>
-<!-- FAVOURITES TRIAL					 -->
-					<!-- <item id="101">
-						<label>3</label>
-						<onclick condition="System.Platform.Android">ActivateWindow(Favourites)</onclick>
+<!-- FAVOURITES TRIAL		working june 2013			 -->
+					<item id="101">
+						<label>favourites</label>
+						<onclick>ActivateWindow(Favourites)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
-					</item> -->
+						<visible>!Skin.HasSetting(HomeMenuNoFavouritesButton)</visible>
+					</item>
 					<item id="6">
 						<label>341</label>
 						<onclick>XBMC.PlayDVD()</onclick>
@@ -1745,7 +1745,9 @@ bottom dock -->
 				<aspectratio>keep</aspectratio>
 				<texture>icon_power.png</texture>
 			</control>
-			<control type="button" id="20">
+
+<!-- Favourites Button - Old ways -->
+			<!-- <control type="button" id="20">
 				<description>Favourites push button</description>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -1770,7 +1772,7 @@ bottom dock -->
 				<height>35</height>
 				<aspectratio>keep</aspectratio>
 				<texture>icon_favourites.png</texture>
-			</control>
+			</control> -->
 		</control>
 
 

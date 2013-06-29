@@ -3,6 +3,22 @@
 	<controls>
 		<!-- media infos -->
 		<control type="group" id="1">
+			<control type="image" id="1">  <!-- bottom OSD bg -->
+				<posx>0</posx>
+				<posy>120r</posy>
+				<width>1280</width>
+				<height>120</height>
+				<texture>tints/black-50.png</texture>
+			</control>
+
+			<control type="image" id="1">  <!-- bottom OSD bg -->
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>90</height>
+				<texture>solidfills/s-greydark.png</texture>
+			</control>
+
 			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] + ![Window.IsVisible(123) | Window.IsVisible(124) | Window.IsVisible(125) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<control type="label" id="1">
@@ -35,8 +51,8 @@
 			</control>
 			<control type="label" id="1">
 				<description>Clock label</description>
-				<posx>1250</posx>
-				<posy>5</posy>
+				<posx>1260</posx>
+				<posy>30</posy>
 				<width>800</width>
 				<height>25</height>
 				<align>right</align>
@@ -45,16 +61,10 @@
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[System.Time]</label>
-				<animation effect="slide" start="0,0" end="-70,0" time="0" condition="Window.IsVisible(VideoOSD)">conditional</animation>
+				<!-- <animation effect="slide" start="0,0" end="-70,0" time="0" condition="Window.IsVisible(VideoOSD)">conditional</animation> -->
 			</control>
 
-			<control type="image" id="1">  <!-- bottom OSD bg -->
-				<posx>0</posx>
-				<posy>230r</posy>
-				<width>1280</width>
-				<height>230</height>
-				<texture>solidfills/s-greydark.png</texture>
-			</control>
+			
 
 
 			<control type="image" id="1">
@@ -65,8 +75,8 @@
 				<height>230</height>
 				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="8">solidfills/s-grey10.png</bordertexture>
-				<bordersize>8</bordersize>
+				<bordertexture border="5">solidfills/s-grey10.png</bordertexture>
+				<bordersize>5</bordersize>
 				<visible>!VideoPlayer.Content(Movies)</visible>
 			</control>
 			<control type="image" id="1">
@@ -85,25 +95,94 @@
 			</control>
 
 
+			<!-- <control type="label" id="1">
+				<description>Heading label</description>
+				<posx>40</posx>
+				<posy>30</posy>
+				<width>910</width>
+				<height>25</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>semilight20</font>
+				<label>Now Playing</label>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>![VideoPlayer.Content(LiveTV) + Player.Recording]</visible>
+				<animation effect="slide" start="0,0" end="0,25" time="0" condition="!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)">conditional</animation>
+			</control> -->
+
+
+
+			<control type="image" id="1">
+				<description>Studio label</description>
+				<posx>60</posx>
+				<posy>0</posy>
+				<width>50</width>
+				<height>50</height>
+				<align>left</align>
+				<texture>$INFO[VideoPlayer.Studio,flagging/studios/,.png]</texture>
+				<visible>VideoPlayer.Content(Movies)</visible>
+			</control>
+			<control type="label" id="1">
+				<posx>40</posx>
+				<posy>0</posy>
+				<width>880</width>
+				<height>30</height>
+				<font>semilight40</font>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<textcolor>blue</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="1">
+				<posx>40</posx>
+				<posy>50</posy>
+				<width>880</width>
+				<height>30</height>
+				<font>semilight20</font>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[VideoPlayer.Tagline]</label>
+				<textcolor>grey</textcolor>
+				<scroll>true</scroll>
+			</control>
+
+
+
+
+			<control type="label" id="1">
+				<description>TV Show label</description>
+				<posx>20</posx>
+				<posy>30</posy>
+				<width>910</width>
+				<height>25</height>
+				<align>left</align>
+				<font>font12</font>
+				<label>$INFO[VideoPlayer.TVShowTitle] ($INFO[VideoPlayer.Season]x$INFO[VideoPlayer.Episode])</label>
+				<textcolor>grey2</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(Episodes)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Music Info label</description>
+				<posx>20</posx>
+				<posy>30</posy>
+				<width>910</width>
+				<height>25</height>
+				<align>left</align>
+				<font>font12</font>
+				<label>$INFO[VideoPlayer.Artist] $INFO[VideoPlayer.Album, - ]</label>
+				<textcolor>grey2</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(MusicVideos)</visible>
+			</control>
+
 
 			<control type="group" id="1">
 				<posx>330</posx>
 				<posy>185r</posy>
-				<control type="label" id="1">
-					<description>Heading label</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>910</width>
-					<height>25</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font13</font>
-					<label>Now Playing</label>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>![VideoPlayer.Content(LiveTV) + Player.Recording]</visible>
-					<animation effect="slide" start="0,0" end="0,25" time="0" condition="!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)">conditional</animation>
-				</control>
+				
 
 				<!-- Live TV -->
 				<control type="image" id="1">
@@ -130,42 +209,7 @@
 				</control>
 
 
-				<control type="image" id="1">
-					<description>Studio label</description>
-					<posx>60</posx>
-					<posy>0</posy>
-					<width>50</width>
-					<height>50</height>
-					<align>left</align>
-					<texture>$INFO[VideoPlayer.Studio,flagging/studios/,.png]</texture>
-					<visible>VideoPlayer.Content(Movies)</visible>
-				</control>
-				<control type="label" id="1">
-					<description>TV Show label</description>
-					<posx>20</posx>
-					<posy>30</posy>
-					<width>910</width>
-					<height>25</height>
-					<align>left</align>
-					<font>font12</font>
-					<label>$INFO[VideoPlayer.TVShowTitle] ($INFO[VideoPlayer.Season]x$INFO[VideoPlayer.Episode])</label>
-					<textcolor>grey2</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(Episodes)</visible>
-				</control>
-				<control type="label" id="1">
-					<description>Music Info label</description>
-					<posx>20</posx>
-					<posy>30</posy>
-					<width>910</width>
-					<height>25</height>
-					<align>left</align>
-					<font>font12</font>
-					<label>$INFO[VideoPlayer.Artist] $INFO[VideoPlayer.Album, - ]</label>
-					<textcolor>grey2</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(MusicVideos)</visible>
-				</control>
+				
 				<control type="label" id="1">
 					<description>LiveTV Info label</description>
 					<posx>20</posx>
@@ -186,16 +230,7 @@
 					<height>35</height>
 					<itemgap>5</itemgap>
 					<orientation>horizontal</orientation>
-					<control type="label" id="1">
-						<width min="10" max="710">auto</width>
-						<height>30</height>
-						<font>font30</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[VideoPlayer.Title]</label>
-						<textcolor>orange</textcolor>
-						<scroll>true</scroll>
-					</control>
+					
 					<control type="image" id="1">
 						<description>Video Resolution Image</description>
 						<width>50</width>
@@ -219,14 +254,14 @@
 					</control>
 				</control>
 				<control type="label" id="1">
-					<posx>0</posx>
-					<posy>120</posy>
-					<width>910</width>
-					<height>25</height>
-					<label>Ends at: $INFO[Player.FinishTime]</label>
-					<align>center</align>
+					<posx>20r</posx>
+					<posy>100</posy>
+					<width>150</width>
+					<height>50</height>
+					<label>Ends At: $INFO[Player.FinishTime]</label>
+					<align>right</align>
 					<aligny>center</aligny>
-					<font>font12</font>
+					<font>semilight20</font>
 					<textcolor>grey</textcolor>
 					<scroll>true</scroll>
 					<visible>Window.IsVisible(VideoOSD) + !VideoPlayer.Content(LiveTV)</visible>
@@ -251,69 +286,75 @@
 
 
 			<control type="group" id="1">
-				<posx>330</posx>
-				<posy>95r</posy>
+				<description>  TIME LABELS   </description>
+				<posx>0</posx>
+				<posy>50r</posy>
 				<visible>!VideoPlayer.Content(LiveTV) | [VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
 				<control type="label" id="1">
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
-					<posx>0</posx>
+					<posx>10</posx>
 					<posy>0</posy>
 					<width>100</width>
 					<height>40</height>
-					<font>font13</font>
+					<font>semibold25</font>
 					<align>left</align>
 					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
 					<label>$INFO[Player.Time(hh:mm:ss)]</label>
 				</control>
 				<control type="label" id="1">
 					<visible>VideoPlayer.Content(LiveTV)</visible>
-					<posx>0</posx>
+					<posx>10</posx>
 					<posy>0</posy>
 					<width>100</width>
 					<height>40</height>
-					<font>font13</font>
+					<font>semibold25</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[Player.StartTime(hh:mm)]</label>
-				</control>
-				<control type="progress" id="1">
-					<description>ProgressbarCache</description>
-					<posx>100</posx>
-					<posy>15</posy>
-					<width>720</width>
-					<height>16</height>
-					<info>Player.ProgressCache</info>
-					<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
-				</control>
-				<control type="progress" id="1">
-					<description>Progressbar</description>
-					<posx>100</posx>
-					<posy>15</posy>
-					<width>720</width>
-					<height>16</height>
-					<info>Player.Progress</info>
+					<textcolor>grey</textcolor>
+					<label>$INFO[Player.Time(hh:mm:ss)]</label>
 				</control>
 				<control type="label" id="1">
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
-					<posx>920</posx>
+					<posx>15r</posx>
 					<posy>0</posy>
 					<width>100</width>
 					<height>40</height>
-					<font>font13</font>
+					<font>semibold25</font>
 					<align>right</align>
 					<aligny>center</aligny>
+					<textcolor>blue</textcolor>
 					<label>$INFO[Player.Duration(hh:mm:ss)]</label>
 				</control>
 				<control type="label" id="1">
 					<visible>VideoPlayer.Content(LiveTV)</visible>
-					<posx>920</posx>
+					<posx>100r</posx>
 					<posy>0</posy>
 					<width>100</width>
 					<height>40</height>
-					<font>font13</font>
-					<align>right</align>
+					<font>semibold25</font>
+					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[Player.FinishTime(hh:mm)]</label>
+					<textcolor>blue</textcolor>
+					<label>$INFO[Player.Duration(hh:mm:ss)]</label>
+				</control>
+
+				<control type="progress" id="1">
+					<description>ProgressbarCache</description>
+					<posx>0</posx>
+					<posy>10r</posy>
+					<width>1280</width>
+					<height>10</height>
+					<info>Player.ProgressCache</info>
+					<midtexture>tints/white-10.png</midtexture>
+				</control>
+				<control type="progress" id="1">
+					<description>Progressbar</description>
+					<posx>0</posx>
+					<posy>10r</posy>
+					<width>1280</width>
+					<height>10</height>
+					<info>Player.Progress</info>
 				</control>
 			</control>
 		</control>

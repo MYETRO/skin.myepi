@@ -171,14 +171,14 @@ SIZE:	10, 15, 17, 20, 25, 30, 35, 40
 	<name>semibold17</name>
 	<filename>SegoeWP-Semibold.ttf</filename>
 	<size>17</size>
-	<linespacing>0.8</linespacing>
+	<linespacing>1.0</linespacing>
 	<!-- <style>bold</style> -->
 </font>
 <font>
 	<name>semibold20</name>
 	<filename>SegoeWP-Semibold.ttf</filename>
 	<size>20</size>
-	<linespacing>0.8</linespacing>
+	<linespacing>0.95</linespacing>
 	<!-- <style>bold</style> -->
 </font>
 <font>
@@ -192,6 +192,27 @@ SIZE:	10, 15, 17, 20, 25, 30, 35, 40
 	<name>semibold30</name>
 	<filename>SegoeWP-Semibold.ttf</filename>
 	<size>30</size>
+	<linespacing>0.8</linespacing>
+	<!-- <style>bold</style> -->
+</font>
+<font>
+	<name>semibold35</name>
+	<filename>SegoeWP-Semibold.ttf</filename>
+	<size>35</size>
+	<linespacing>0.6</linespacing>
+	<!-- <style>bold</style> -->
+</font>
+<font>
+	<name>semibold40</name>
+	<filename>SegoeWP-Semibold.ttf</filename>
+	<size>40</size>
+	<linespacing>0.65</linespacing>
+	<!-- <style>bold</style> -->
+</font>
+<font>
+	<name>semibold50</name>
+	<filename>SegoeWP-Semibold.ttf</filename>
+	<size>50</size>
 	<linespacing>0.8</linespacing>
 	<!-- <style>bold</style> -->
 </font>

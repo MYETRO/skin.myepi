@@ -5,14 +5,14 @@
 	<controls>
 
 		<control type="group">
-			<animation type="WindowOpen">
+			<!-- <animation type="WindowOpen">
 				<effect type="slide" start="0,200" end="0,0" time="600" tween="cubic" easing="out" />
 				<effect type="fade" start="0" end="100" time="600" />
 			</animation>
 			<animation type="WindowClose">
 				<effect type="slide" start="0,0" end="0,200" time="600" tween="cubic" easing="out" />
 				<effect type="fade" start="100" end="0" time="600" />
-			</animation>
+			</animation> -->
 			<visible>!VideoPlayer.IsFullscreen + !Window.IsVisible(screencalibration)</visible>
 
 			<control type="group">
@@ -32,7 +32,7 @@
 				</control>
 
 				<control type="label">
-					<description>Now Playing</description>
+					<description>Tagline</description>
 					<posx>0</posx>
 					<posy>32</posy>
 					<width>830</width>
