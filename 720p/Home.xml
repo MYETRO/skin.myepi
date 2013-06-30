@@ -1297,7 +1297,7 @@ stuff like that
 
 
 
-				
+
 
 
 
@@ -1718,7 +1718,7 @@ bottom dock -->
 			<posy>55r</posy>
 			<include>Window_OpenClose_Animation</include>
 
-			<control type="button" id="21">
+			<control type="button" id="20">
 				<description>Power push button</description>
 				<posx>55</posx>
 				<posy>0</posy>
@@ -1747,7 +1747,7 @@ bottom dock -->
 			</control>
 
 <!-- Favourites Button - Old ways -->
-			<!-- <control type="button" id="20">
+			<!-- <control type="button" id="21">
 				<description>Favourites push button</description>
 				<posx>0</posx>
 				<posy>0</posy>
